@@ -7,6 +7,19 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- GOOGLE TAG (substitua pelos seus IDs reais) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-XXXXXXXXXX');
+    gtag('event', 'conversion', {
+      'send_to': 'AW-XXXXXXXXXX/YYYYYYYYYY'
+    });
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -21,10 +34,10 @@
     }
 
     .container {
-      max-width: 700px;
-      padding: 50px 30px;
+      max-width: 720px;
+      padding: 60px 30px;
       background: rgba(255,255,255,0.08);
-      border-radius: 14px;
+      border-radius: 16px;
     }
 
     h1 {
@@ -36,12 +49,18 @@
     p {
       font-size: 20px;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+    }
+
+    .destaque {
+      color: #00ffcc;
+      font-weight: 600;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 34px;
+      margin-top: 20px;
+      padding: 14px 36px;
       background: #00ffcc;
       color: #000;
       text-decoration: none;
@@ -56,37 +75,24 @@
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 35px;
       font-size: 14px;
       opacity: 0.7;
     }
   </style>
-
-  <!-- GOOGLE ADS - EVENTO DE CONVERSÃO -->
-  <!-- SUBSTITUA AW-XXXXXXXXX / YYYYYYYYYY PELOS DADOS DA SUA CONTA -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}    
-    gtag('js', new Date());
-
-    gtag('config', 'AW-XXXXXXXXX');
-    gtag('event', 'conversion', {
-      'send_to': 'AW-XXXXXXXXX/YYYYYYYYYY'
-    });
-  </script>
 </head>
 
 <body>
 
   <div class="container">
-    <h1>Obrigado pelo seu interesse!</h1>
-    <p>
-      Você foi direcionado para o site oficial do curso.<br>
-      Desejamos uma excelente jornada de aprendizado.
-    </p>
+    <h1>Obrigado pela sua visita!</h1>
+    <p>Você deu um passo importante rumo à sua evolução profissional.</p>
+    <p class="destaque">Você será direcionado para o site oficial do curso.</p>
+    <p>Analise todas as informações com calma antes de finalizar sua inscrição.</p>
 
-    <a class="btn" href="index.html">Voltar ao site</a>
+    <a class="btn" href="https://go.hotmart.com/P103425796F" target="_blank">
+      Acessar Curso de Pilates
+    </a>
 
     <footer>
       © 2026 Portal Evolução
