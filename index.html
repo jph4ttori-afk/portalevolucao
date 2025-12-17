@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,7 +7,6 @@
 
 <!-- Meta tag de verificação do Google -->
 <meta name="google-site-verification" content="AW-17808283080">
-
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
@@ -58,6 +59,9 @@ header .balloon {
   position: absolute;
   animation: floatUp linear infinite;
 }
+header .balloon.layer2 {
+  background: rgba(255,120,120,0.4);
+}
 @keyframes floatUp {
   0% { transform: translateY(100%); }
   100% { transform: translateY(-50px); }
@@ -96,11 +100,146 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
 /* Contato */
 .contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; text-shadow:0 0 6px #ff4444; }
 
+/* Responsivo */
 @media(max-width:768px){ 
   header h1{ font-size:2.2rem;} 
   header p{ font-size:1rem;} 
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
+  #voll-produto { flex-direction: column; align-items: center; }
+  #voll-produto img { margin-bottom:20px; max-width:300px; }
+}
+
+/* Seção VOLL+ lado a lado com espaçamento */
+#voll-produto {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:30px; 
+}
+#voll-produto img {
+  flex:1 1 300px;
+  max-width:300px;
+  border:4px solid #ff0000;
+  border-radius:12px;
+  box-shadow:0 0 18px #ff4444;
+}
+#voll-produto .texto-produto {
+  flex:2 1 500px;
 }
 </style>
 </head>
+<body>
+
+<header>
+  <div class="header-lines"></div>
+  <h1>Portal Evolução</h1>
+  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+  <div class="header-lines"></div>
+</header>
+
+<script>
+// Balões animados no header
+const headerEl = document.querySelector('header');
+const totalBalloons = 10;
+for (let i = 0; i < totalBalloons; i++) {
+  const balloon = document.createElement('div');
+  balloon.className = 'balloon';
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.width = 20 + Math.random() * 25 + 'px';
+  balloon.style.height = 25 + Math.random() * 25 + 'px';
+  balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
+  headerEl.appendChild(balloon);
+
+  // Segunda camada de balões
+  const balloon2 = document.createElement('div');
+  balloon2.className = 'balloon layer2';
+  balloon2.style.left = Math.random() * 100 + 'vw';
+  balloon2.style.width = 15 + Math.random() * 20 + 'px';
+  balloon2.style.height = 15 + Math.random() * 20 + 'px';
+  balloon2.style.animationDuration = 8 + Math.random() * 6 + 's';
+  headerEl.appendChild(balloon2);
+}
+</script>
+
+<main>
+
+<section>
+<h2>Portal Evolução</h2>
+<p>🔹 Profissional e confiável</p>
+<p>🔹 Focado em Pilates e bem-estar</p>
+<p>🔹 Pensando no futuro (expansão para outros cursos)</p>
+</section>
+
+<!-- Seção VOLL+ com imagem ao lado -->
+<section id="voll-produto">
+  <img src="produto.png.png" alt="Imagem do Produto VOLL+ Pilates">
+  <div class="texto-produto">
+    <h2>VOLL+ Pilates - Sobre o Produto</h2>
+    <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
+    <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
+    <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
+    <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
+
+    <h3>Escolha sua assinatura da VOLL+</h3>
+    <ul>
+      <li>O MAIS VANTAJOSO</li>
+      <li>R$360 de desconto</li>
+      <li>Desconto em nossos parceiros: EquiPilates e Pratyque</li>
+      <li>Curso de sua escolha com certificado</li>
+      <li>Acesso à todos os cursos dentro da plataforma VOLL+</li>
+      <li>Conteúdos novos todos os meses</li>
+      <li>*Assinatura válida por um ano com renovação automática</li>
+      <li>R$ 149/mês - Plano anual sem comprometer o limite do cartão de crédito</li>
+      <li>R$ 126/mês - Plano anual parcelado no cartão de crédito em até 12x</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+<h2>5 Dicas Essenciais de Pilates</h2>
+<ul>
+<li>Mantenha postura correta para evitar lesões</li>
+<li>Respire profundamente em cada movimento</li>
+<li>Priorize qualidade, não quantidade</li>
+<li>Use acessórios para potencializar exercícios</li>
+<li>Seja consistente e paciente com seu progresso</li>
+</ul>
+</section>
+
+<section>
+<h2>Músicas de Relaxamento</h2>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+</section>
+
+<section>
+<h2>Links Rápidos</h2>
+<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
+<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
+<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
+<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
+</section>
+
+<section>
+<h2>Contato & Segurança</h2>
+<div class="contact-info">
+<p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
+<p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
+<p>📞 Cel: [11] 99369-7721</p>
+<p>⚠️ Não aceitamos depósitos ou transferências em nome de terceiros ou pessoas físicas. Confirme sempre antes de pagar.</p>
+<p>[Gmail: jph4ttori@gmail.com]</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+&copy; 2025 Portal Evolução — Todos os direitos reservados
+</footer>
+
+</body>
+</html>
