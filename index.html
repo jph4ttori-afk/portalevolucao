@@ -111,6 +111,26 @@ footer {
   header p{ font-size:1rem;} 
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
+  #voll-produto { flex-direction: column; align-items: center; }
+  #voll-produto img { margin-bottom:20px; }
+}
+
+/* Seção VOLL+ lado a lado com espaçamento */
+#voll-produto {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:30px; /* espaçamento maior entre imagem e texto */
+}
+#voll-produto img {
+  flex:1 1 300px; /* imagem reduzida */
+  max-width:300px;
+  border:4px solid #ff0000;
+  border-radius:12px;
+  box-shadow:0 0 18px #ff4444;
+}
+#voll-produto .texto-produto {
+  flex:2 1 500px;
 }
 </style>
 </head>
@@ -123,28 +143,32 @@ footer {
 
 <main>
 
-<section>
-<h2>VOLL+ Pilates - Sobre o Produto</h2>
-<p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
-<p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
-<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
-<p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
+<!-- Seção VOLL+ com imagem ao lado -->
+<section id="voll-produto">
+  <img src="produto.png" alt="Imagem do Produto VOLL+ Pilates">
+  <div class="texto-produto">
+    <h2>VOLL+ Pilates - Sobre o Produto</h2>
+    <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
+    <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
+    <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
+    <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
 
-<h3>3 Benefícios Principais</h3>
-<ul>
-<li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
-<li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
-<li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
-</ul>
+    <h3>3 Benefícios Principais</h3>
+    <ul>
+      <li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
+      <li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
+      <li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
+    </ul>
 
-<h3>Para quem é esse curso?</h3>
-<ul>
-<li>Profissionais de Educação Física</li>
-<li>Fisioterapeutas</li>
-<li>Estudantes da área da saúde</li>
-<li>Pessoas que querem trabalhar com Pilates</li>
-<li>Quem busca qualidade de vida e conhecimento corporal</li>
-</ul>
+    <h3>Para quem é esse curso?</h3>
+    <ul>
+      <li>Profissionais de Educação Física</li>
+      <li>Fisioterapeutas</li>
+      <li>Estudantes da área da saúde</li>
+      <li>Pessoas que querem trabalhar com Pilates</li>
+      <li>Quem busca qualidade de vida e conhecimento corporal</li>
+    </ul>
+  </div>
 </section>
 
 <section>
