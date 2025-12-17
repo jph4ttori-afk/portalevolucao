@@ -4,111 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
-<meta name="description" content="Aprenda Pilates com os melhores cursos online. Dicas práticas, músicas de relaxamento e links diretos para compra. Portal Evolução - conhecimento que move sua vida.">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
-body { background:#1a1a1a; color:#000; font-size:16px; line-height:1.6; overflow-x:hidden; }
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+body { background:#2c2c2c; color:#fff; line-height:1.6; font-size:16px; }
 
-/* Header e Footer */
-header, footer {
-  text-align:center;
-  font-weight:bold;
-  color:#fff;
-  text-shadow:0 0 10px #ff0000;
-  background:#ff0000;
-  padding:30px 15px;
-  box-shadow:0 0 20px #ff0000;
+header {
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff0000, #a60000);
+  overflow: hidden;
+  border-bottom: 4px solid #ff4444;
+  box-shadow: 0 0 20px #ff0000;
 }
-header h1 { font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:15px; }
-header p { max-width:900px; margin:auto; font-size:1rem; color:#fff; }
-
-/* Main */
-main { max-width:1200px; margin:auto; padding:50px 20px; }
-
-/* Seções */
-section {
-  margin-bottom:50px;
-  padding:25px;
-  border-radius:12px;
-  background:rgba(255,0,0,0.08); /* vermelho suave */
-  position:relative;
-  z-index:1;
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
 }
-h2 {
-  font-size:2rem;
-  margin-bottom:20px;
-  color:#ff0000;
-  text-shadow:0 0 8px #ff4444;
-  border-bottom:3px solid #ff0000;
-  display:inline-block;
-  padding-bottom:5px;
+header p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 0 6px #ff4444;
 }
-ul { list-style:none; margin-top:15px; }
-ul li { position:relative; padding-left:25px; margin-bottom:12px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; font-weight:bold; }
-p, li { margin-bottom:12px; }
-
-/* Botões neon */
-.btn-neon {
-  display:inline-block;
-  margin:5px;
-  padding:14px 26px;
-  color:#000;
-  text-decoration:none;
-  font-weight:700;
-  border:2px solid #ff0000;
-  border-radius:6px;
-  box-shadow:0 0 12px #ff0000,0 0 25px #ff4444;
-  transition:0.3s all;
-}
-.btn-neon:hover {
-  background:#ff0000;
-  color:#fff;
-  transform:scale(1.1);
-  box-shadow:0 0 30px #ff0000,0 0 50px #ff8888;
+.header-lines {
+  height: 4px;
+  width: 120px;
+  background: #ff4444;
+  margin: 15px auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #ff8888;
 }
 
-/* Contato */
-.contact-info {
-  background: rgba(255,0,0,0.12);
-  padding:18px;
-  border-radius:10px;
-  margin-top:15px;
-}
-
-/* Balões decorativos */
-.balloon {
-  position:absolute;
-  background: rgba(255,80,80,0.4);
-  border-radius:50%;
-  opacity:0.7;
+/* Balões animados */
+header .balloon {
+  background: rgba(255,80,80,0.6);
+  border-radius: 50%;
+  position: absolute;
   animation: floatUp linear infinite;
-  z-index:0;
 }
-@keyframes floatUp { 0%{transform:translateY(100vh);} 100%{transform:translateY(-50px);} }
+@keyframes floatUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-50px); }
+}
 
-/* Audio */
+main { padding:50px 20px; max-width:1200px; margin:auto; }
+section { margin-bottom:40px; padding:20px; border-radius:10px; background:rgba(255,0,0,0.05); }
+h2 { font-size:2rem; margin-bottom:15px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; }
+ul { list-style:none; margin-top:15px; }
+ul li { position:relative; padding-left:25px; margin-bottom:10px; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
+p, li { margin-bottom:10px; }
+
+.btn-neon {
+  display:inline-block; margin:5px; padding:12px 20px; color:#000;
+  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
+  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
+}
+.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
+
 audio { width:100%; margin:10px 0; }
 
-/* Responsivo */
-@media(max-width:768px){
-  header h1{ font-size:2.2rem; }
-  header p{ font-size:0.95rem; }
-  section{padding:15px;}
-  .btn-neon{padding:12px 18px; font-size:0.9rem;}
-}
+footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; }
+
+.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
+
+@media(max-width:768px){ header h1{ font-size:2.2rem;} header p{ font-size:1rem;} .btn-neon{padding:10px 15px; font-size:0.9rem;} section{padding:15px;} }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Portal Evolução</h1>
-<p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+  <div class="header-lines"></div>
+  <h1>Portal Evolução</h1>
+  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+  <div class="header-lines"></div>
 </header>
+
+<script>
+// Balões animados no header
+const header = document.querySelector('header');
+const totalBalloons = 10;
+for (let i = 0; i < totalBalloons; i++) {
+  const balloon = document.createElement('div');
+  balloon.className = 'balloon';
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.width = 20 + Math.random() * 25 + 'px';
+  balloon.style.height = 25 + Math.random() * 25 + 'px';
+  balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
+  header.appendChild(balloon);
+}
+</script>
 
 <main>
 
@@ -123,7 +113,7 @@ audio { width:100%; margin:10px 0; }
 <h2>VOLL+ Pilates - Sobre o Produto</h2>
 <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
 <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
-<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
+<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadores que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
 <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
 
 <h3>3 Benefícios Principais</h3>
@@ -165,10 +155,10 @@ audio { width:100%; margin:10px 0; }
 
 <section>
 <h2>Links Rápidos</h2>
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon" aria-label="Página de Vendas">Página de Vendas</a>
-<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon" aria-label="Checkout">Checkout</a>
-<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon" aria-label="VOLL+">VOLL+</a>
-<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon" aria-label="Checkout 2ª Semana">Checkout 2ª Semana</a>
+<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
+<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
+<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
+<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
 </section>
 
 <section>
@@ -187,20 +177,6 @@ audio { width:100%; margin:10px 0; }
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
-
-<!-- Balões decorativos -->
-<script>
-const totalBalloons = 15;
-for (let i=0;i<totalBalloons;i++){
-  const balloon=document.createElement('div');
-  balloon.className='balloon';
-  balloon.style.left=Math.random()*100+'vw';
-  balloon.style.width=20+Math.random()*25+'px';
-  balloon.style.height=25+Math.random()*30+'px';
-  balloon.style.animationDuration=6+Math.random()*6+'s';
-  document.body.appendChild(balloon);
-}
-</script>
 
 </body>
 </html>
