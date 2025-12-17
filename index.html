@@ -34,10 +34,8 @@ header p {
   margin:auto; 
   color:#fff;
   text-shadow: 0 0 6px #ff4444;
-  animation: fadeFloat 2s ease-in-out forwards; /* animação adicionada */
+  animation: fadeFloat 2s ease-in-out forwards;
 }
-
-/* Animação de fade + leve movimento */
 @keyframes fadeFloat {
   0% { opacity: 0; transform: translateY(10px); }
   50% { opacity: 0.5; transform: translateY(5px); }
@@ -47,24 +45,12 @@ header p {
 /* Bolhas */
 .balloon {
   position:absolute; 
-  background:#ff6666; /* vermelho suave */
+  background:#ff6666; 
   border-radius:50%; 
   opacity:0.5;
   animation: floatUp linear infinite;
 }
 @keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
-
-/* Imagem do produto */
-#produto-imagem img {
-  max-width: 100%;
-  width: 380px; 
-  height: auto;
-  border: 4px solid #ff0000;
-  border-radius: 12px;
-  box-shadow: 0 0 18px #ff4444;
-  display: block;
-  margin: 30px auto;
-}
 
 /* Conteúdo principal */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
@@ -87,7 +73,7 @@ p, li { margin-bottom:10px; color:#fff; text-shadow: 0 0 4px #ff4444; }
   display:inline-block; 
   margin:5px; 
   padding:12px 20px; 
-  color:#fff; /* letras brancas */
+  color:#fff; 
   text-decoration:none; 
   font-weight:bold; 
   border:2px solid #ff0000; 
@@ -122,109 +108,3 @@ footer {
 /* Responsivo */
 @media(max-width:768px){ 
   header h1{ font-size:2.2rem;} 
-  header p{ font-size:1rem;} 
-  .btn-neon{padding:10px 15px; font-size:0.9rem;} 
-  section{padding:15px;} 
-}
-</style>
-</head>
-<body>
-
-<header>
-<h1>Portal Evolução</h1>
-<p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
-</header>
-
-<main>
-
-<!-- Imagem do Produto antes do início da seção VOLL+ -->
-<section id="produto-imagem">
-  <img src="produto.png" alt="Imagem do Produto VOLL+ Pilates">
-</section>
-
-<section>
-<h2>VOLL+ Pilates - Sobre o Produto</h2>
-<p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
-<p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
-<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
-<p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
-
-<h3>3 Benefícios Principais</h3>
-<ul>
-<li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
-<li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
-<li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
-</ul>
-
-<h3>Para quem é esse curso?</h3>
-<ul>
-<li>Profissionais de Educação Física</li>
-<li>Fisioterapeutas</li>
-<li>Estudantes da área da saúde</li>
-<li>Pessoas que querem trabalhar com Pilates</li>
-<li>Quem busca qualidade de vida e conhecimento corporal</li>
-</ul>
-</section>
-
-<section>
-<h2>5 Dicas Essenciais de Pilates</h2>
-<ul>
-<li>Mantenha postura correta para evitar lesões</li>
-<li>Respire profundamente em cada movimento</li>
-<li>Priorize qualidade, não quantidade</li>
-<li>Use acessórios para potencializar exercícios</li>
-<li>Seja consistente e paciente com seu progresso</li>
-</ul>
-</section>
-
-<section>
-<h2>Músicas de Relaxamento</h2>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
-</section>
-
-<section>
-<h2>Links Rápidos</h2>
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
-<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
-<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
-<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
-</section>
-
-<section>
-<h2>Contato & Segurança</h2>
-<div class="contact-info">
-<p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
-<p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
-<p>📞 Cel: [11] 99369-7721</p>
-<p>⚠️ Não aceitamos depósitos ou transferências em nome de terceiros ou pessoas físicas. Confirme sempre antes de pagar.</p>
-<p>[Gmail: jph4ttori@gmail.com]</p>
-</div>
-</section>
-
-</main>
-
-<footer>
-&copy; 2025 Portal Evolução — Todos os direitos reservados
-</footer>
-
-<script>
-// Bolhas animadas no cabeçalho
-const header = document.querySelector('header');
-const totalBalloons = window.innerWidth < 768 ? 15 : 25;
-for(let i=0;i<totalBalloons;i++){
-  const balloon = document.createElement('div');
-  balloon.className='balloon';
-  balloon.style.left=Math.random()*100+'vw';
-  balloon.style.width=20+Math.random()*20+'px';
-  balloon.style.height=30+Math.random()*30+'px';
-  balloon.style.animationDuration=6+Math.random()*6+'s';
-  header.appendChild(balloon);
-}
-</script>
-
-</body>
-</html>
