@@ -4,106 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
+
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
 /* Corpo do site */
 body { 
-  background:#1e1e1e;
-  color:#fff;
+  background:#2c2c2c; 
+  color:#ffffff; 
   line-height:1.6; 
   font-size:16px; 
+  text-shadow: 0 0 6px #ff4444;
 }
 
 /* Cabeçalho */
 header {
-  position:relative;
-  padding:50px 20px;
-  background: linear-gradient(90deg,#ff0000,#cc0000,#990000);
-  text-align:center;
-  box-shadow:0 0 20px #ff0000;
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff0000, #a60000);
+  overflow: hidden;
+  border-bottom: 4px solid #ff4444;
+  box-shadow: 0 0 20px #ff0000;
 }
-header h1 { 
-  font-size:3rem; 
-  margin-bottom:15px; 
-  color:#fff;
-  text-shadow: 0 0 10px #ff4444, 0 0 20px #ff5555;
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
 }
-header p { 
-  max-width:800px; 
-  margin:auto; 
-  color:#fff;
-  text-shadow: 0 0 6px #ff4444;
-  animation: fadeFloat 2s ease-in-out forwards;
+header p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem; 
+  line-height: 1.4;
+  text-shadow: 0 0 6px #ff8888;
 }
-@keyframes fadeFloat {
-  0% { opacity: 0; transform: translateY(10px); }
-  50% { opacity: 0.5; transform: translateY(5px); }
-  100% { opacity: 1; transform: translateY(0); }
+.header-lines {
+  height: 4px;
+  width: 120px;
+  background: #ff4444;
+  margin: 15px auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #ff8888;
 }
 
-/* Bolhas */
-.balloon {
-  position:absolute; 
-  background:#ff6666; 
-  border-radius:50%; 
-  opacity:0.5;
+/* Balões animados */
+header .balloon {
+  border-radius: 50%;
+  position: absolute;
   animation: floatUp linear infinite;
 }
-@keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
-
-/* Conteúdo principal */
-main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { margin-bottom:40px; padding:20px; border-radius:10px; background:rgba(255,0,0,0.05); }
-h2 { 
-  font-size:2rem; 
-  margin-bottom:15px; 
-  border-bottom:2px solid #ff0000; 
-  display:inline-block; 
-  padding-bottom:5px; 
-  text-shadow: 0 0 6px #ff4444;
+header .balloon.layer1 {
+  background: rgba(255,80,80,0.6);
+  opacity:0.6;
 }
+header .balloon.layer2 {
+  background: rgba(255,200,200,0.2);
+  opacity:0.35;
+  animation-duration: calc(6s + var(--i) * 1s);
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-50px); }
+}
+
+/* Seções do site */
+main { padding:50px 20px; max-width:1200px; margin:auto; }
+section { 
+  margin-bottom:40px; 
+  padding:25px; 
+  border-radius:10px; 
+  background:rgba(255,0,0,0.05); 
+}
+h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; text-shadow:0 0 6px #ff4444; }
 ul { list-style:none; margin-top:15px; }
-ul li { position:relative; padding-left:25px; margin-bottom:10px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
-p, li { margin-bottom:10px; color:#fff; text-shadow: 0 0 4px #ff4444; }
+ul li { position:relative; padding-left:30px; margin-bottom:12px; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; font-weight:bold; }
+p, li { margin-bottom:12px; text-shadow:0 0 6px #ff4444; line-height:1.5; }
 
 /* Botões neon */
 .btn-neon {
-  display:inline-block; 
-  margin:5px; 
-  padding:12px 20px; 
-  color:#fff;
-  text-decoration:none; 
-  font-weight:bold; 
-  border:2px solid #ff0000; 
-  border-radius:5px; 
-  text-align:center; 
-  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; 
-  transition:0.3s;
+  display:inline-block; margin:10px 5px; padding:12px 20px; 
+  color:#ffffff;
+  text-shadow: 0 0 6px #ff4444;
+  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
+  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
 }
-.btn-neon:hover { 
-  background:#ff0000; 
-  color:#fff; 
-  transform:scale(1.1); 
-  box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; 
-}
+.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.05); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
 
 /* Áudio */
 audio { width:100%; margin:10px 0; }
 
 /* Rodapé */
-footer { 
-  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); 
-  color:#fff; 
-  text-align:center; 
-  padding:25px 20px; 
-  font-weight:bold; 
-  box-shadow:0 0 15px #ff4444;
-}
+footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; text-shadow:0 0 6px #ff4444; }
 
 /* Contato */
-.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
+.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; text-shadow:0 0 6px #ff4444; }
 
 /* Responsivo */
 @media(max-width:768px){ 
@@ -112,7 +110,7 @@ footer {
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
   #voll-produto { flex-direction: column; align-items: center; }
-  #voll-produto img { margin-bottom:20px; }
+  #voll-produto img { margin-bottom:20px; width:300px; } /* ajuste responsivo */
 }
 
 /* Seção VOLL+ lado a lado com espaçamento */
@@ -123,8 +121,8 @@ footer {
   gap:30px;
 }
 #voll-produto img {
-  flex:1 1 380px;
-  max-width:380px;
+  flex:1 1 300px;
+  width:300px; /* Tamanho fixo conforme solicitado */
   border:4px solid #ff0000;
   border-radius:12px;
   box-shadow:0 0 18px #ff4444;
@@ -132,32 +130,60 @@ footer {
 #voll-produto .texto-produto {
   flex:2 1 500px;
 }
-
-/* Estilo dos preços */
-.preco {
-  background: rgba(255,255,255,0.1);
-  border: 2px solid #ff0000;
-  border-radius: 10px;
-  padding:15px;
-  margin:15px 0;
-  color:#ffff66;
-  font-weight:bold;
+#precos {
+  background: rgba(255,0,0,0.08);
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
 }
-.preco span {
-  color:#ff6666;
-  font-size:1.2rem;
-  font-weight:bold;
-}
+#precos h3 { color:#ffd700; text-shadow:0 0 8px #ff4444; margin-bottom:15px; }
+#precos p { color:#ffdd99; margin-bottom:8px; font-weight:bold; }
+#precos ul li { color:#ffffff; font-weight:bold; }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Portal Evolução</h1>
-<p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+  <div class="header-lines"></div>
+  <h1>Portal Evolução</h1>
+  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+  <div class="header-lines"></div>
 </header>
 
+<script>
+// Balões animados no header
+const header = document.querySelector('header');
+const totalBalloons = 12; // camada 1
+for (let i = 0; i < totalBalloons; i++) {
+  const balloon = document.createElement('div');
+  balloon.className = 'balloon layer1';
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.width = 15 + Math.random() * 25 + 'px';
+  balloon.style.height = 15 + Math.random() * 25 + 'px';
+  balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
+  header.appendChild(balloon);
+}
+// Segunda camada de balões
+const totalBalloons2 = 10; 
+for (let i = 0; i < totalBalloons2; i++) {
+  const balloon = document.createElement('div');
+  balloon.className = 'balloon layer2';
+  balloon.style.left = Math.random() * 100 + 'vw';
+  balloon.style.width = 10 + Math.random() * 20 + 'px';
+  balloon.style.height = 10 + Math.random() * 20 + 'px';
+  balloon.style.animationDuration = 7 + Math.random() * 6 + 's';
+  header.appendChild(balloon);
+}
+</script>
+
 <main>
+
+<section>
+<h2>Portal Evolução</h2>
+<p>🔹 Profissional e confiável</p>
+<p>🔹 Focado em Pilates e bem-estar</p>
+<p>🔹 Pensando no futuro (expansão para outros cursos)</p>
+</section>
 
 <!-- Seção VOLL+ com imagem ao lado -->
 <section id="voll-produto">
@@ -168,18 +194,6 @@ footer {
     <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
     <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
     <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
-
-    <div class="preco">
-      <h3>ESCOLHA SUA ASSINATURA DA VOLL+</h3>
-      <p>O MAIS VANTAJOSO: <span>R$360 de desconto</span></p>
-      <p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
-      <p>Curso de sua escolha com certificado</p>
-      <p>Acesso à todos os cursos dentro da plataforma VOLL+</p>
-      <p>Conteúdos novos todos os meses</p>
-      <p>*assinatura válida por um ano com renovação automática</p>
-      <p><strong>R$ 149/mês</strong> — PLANO ANUAL SEM COMPROMETER O LIMITE DO CARTÃO DE CRÉDITO</p>
-      <p><strong>R$ 126/mês</strong> — PLANO ANUAL PARCELADO NO CARTÃO DE CRÉDITO EM ATÉ 12X</p>
-    </div>
 
     <h3>3 Benefícios Principais</h3>
     <ul>
@@ -197,6 +211,22 @@ footer {
       <li>Quem busca qualidade de vida e conhecimento corporal</li>
     </ul>
   </div>
+</section>
+
+<!-- Preços -->
+<section id="precos">
+<h3>Escolha Sua Assinatura da VOLL+</h3>
+<p>O MAIS VANTAJOSO</p>
+<p>R$360 de desconto</p>
+<p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
+<ul>
+<li>Curso de sua escolha com certificado</li>
+<li>Acesso a todos os cursos dentro da plataforma VOLL+</li>
+<li>Conteúdos novos todos os meses</li>
+<li>*assinatura válida por um ano com renovação automática</li>
+</ul>
+<p>R$ 149/mês – PLANO ANUAL SEM COMPROMETER O LIMITE DO CARTÃO DE CRÉDITO</p>
+<p>R$ 126/mês – PLANO ANUAL PARCELADO NO CARTÃO DE CRÉDITO EM ATÉ 12X</p>
 </section>
 
 <section>
@@ -243,21 +273,6 @@ footer {
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
-
-<script>
-// Bolhas animadas no cabeçalho
-const header = document.querySelector('header');
-const totalBalloons = window.innerWidth < 768 ? 15 : 25;
-for(let i=0;i<totalBalloons;i++){
-  const balloon = document.createElement('div');
-  balloon.className='balloon';
-  balloon.style.left=Math.random()*100+'vw';
-  balloon.style.width=20+Math.random()*20+'px';
-  balloon.style.height=30+Math.random()*30+'px';
-  balloon.style.animationDuration=6+Math.random()*6+'s';
-  header.appendChild(balloon);
-}
-</script>
 
 </body>
 </html>
