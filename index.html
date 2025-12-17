@@ -11,17 +11,17 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
 
-/* FUNDO ESCURO */
-body { background: linear-gradient(135deg,#000,#222); color:#fff; overflow-x:hidden; line-height:1.6; }
+/* FUNDO CLARO */
+body { background: linear-gradient(135deg,#f0f0f0,#e0e0e0); color:#000; overflow-x:hidden; line-height:1.6; }
 
 /* TEXTO DESTACADO */
-h1,h2,h3,p,li,a { color:#fff; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
+h1,h2,h3,p,li,a { color:#000; text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000; }
 
 /* HEADER */
 header {
   position: relative;
   height: 380px;
-  background: linear-gradient(90deg,#0f0c29,#302b63,#24243e);
+  background: linear-gradient(90deg,#f5f5f5,#ddd,#ccc);
   display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px;
   overflow:hidden;
 }
@@ -42,7 +42,7 @@ header p { font-size:1.1rem; max-width:850px; margin-top:10px; }
 body::after {
   content:""; position:fixed; top:0; left:0; width:200%; height:200%;
   background-image:url('https://www.transparenttextures.com/patterns/pencil-paper.png');
-  opacity:0.1; pointer-events:none; z-index:-1;
+  opacity:0.05; pointer-events:none; z-index:-1;
   animation: bgMove 60s linear infinite;
 }
 @keyframes bgMove {0%{transform:translate(0,0);}100%{transform:translate(-50px,-50px);}}
@@ -61,17 +61,17 @@ ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
 /* BOTÕES NEON */
 .btn-neon {
-  display:inline-block; margin:5px; padding:12px 20px; color:#fff;
+  display:inline-block; margin:5px; padding:12px 20px; color:#000;
   text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center;
-  text-shadow:0 0 5px #ff0000; box-shadow:0 0 15px #ff0000,0 0 30px #ff0000; transition:0.3s;
+  text-shadow:0 0 3px #ff0000; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
 }
-.btn-neon:hover { background:#ff0000; color:#000; transform:scale(1.1); box-shadow:0 0 50px #ff0000,0 0 80px #ff4444; }
+.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
 
 /* AUDIO */
 audio { width:100%; margin:10px 0; outline:none; }
 
 /* FOOTER */
-footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#000; text-align:center; padding:25px 20px; font-weight:bold; }
+footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; }
 
 /* CONTATO */
 .contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
