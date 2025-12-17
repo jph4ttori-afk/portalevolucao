@@ -10,10 +10,12 @@
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
-body { background: linear-gradient(135deg,#000,#222); color:#000; overflow-x:hidden; line-height:1.6; }
 
-/* TEXTO COM CONTORNO VERMELHO */
-h1,h2,h3,p,li,a { color:#000; text-shadow: 0 0 2px #ff0000, 0 0 4px #ff0000, 0 0 6px #ff0000; }
+/* FUNDO ESCURO */
+body { background: linear-gradient(135deg,#000,#222); color:#fff; overflow-x:hidden; line-height:1.6; }
+
+/* TEXTO DESTACADO */
+h1,h2,h3,p,li,a { color:#fff; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; }
 
 /* HEADER */
 header {
@@ -59,9 +61,9 @@ ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
 /* BOTÕES NEON */
 .btn-neon {
-  display:inline-block; margin:5px; padding:12px 20px; color:#000;
+  display:inline-block; margin:5px; padding:12px 20px; color:#fff;
   text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center;
-  text-shadow:0 0 2px #ff0000; box-shadow:0 0 15px #ff0000,0 0 30px #ff0000; transition:0.3s;
+  text-shadow:0 0 5px #ff0000; box-shadow:0 0 15px #ff0000,0 0 30px #ff0000; transition:0.3s;
 }
 .btn-neon:hover { background:#ff0000; color:#000; transform:scale(1.1); box-shadow:0 0 50px #ff0000,0 0 80px #ff4444; }
 
@@ -100,6 +102,7 @@ for(let i=0;i<totalBalloons;i++){
   b.style.animationDuration=(6+Math.random()*6)+'s';
   headerEl.appendChild(b);
 }
+
 const sections=document.querySelectorAll('section');
 function showSections(){ 
   sections.forEach(s=>{
