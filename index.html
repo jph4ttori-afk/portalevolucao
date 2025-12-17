@@ -7,121 +7,234 @@
   <meta name="description" content="Portal Evolução: cursos de Pilates e bem-estar com recomendações e links oficiais da VOLL+.">
 
   <!-- Importando Fontes Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
   <style>
-    /* Estilo Geral da Página */
+    /* Estilos Gerais */
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
+      background: linear-gradient(135deg, #0d0d0d, #2c3e50); /* Gradiente escuro */
+      color: #fff;
+      line-height: 1.6;
     }
 
-    /* Seções principais */
-    .section {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+    /* Seção Principal do Corpo */
+    .main-section {
+      padding: 60px 20px;
       text-align: center;
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      margin-top: 60px;
     }
 
-    /* Estilo do Título da Página */
-    .section h2 {
+    /* Estilo para título */
+    .main-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .main-section h3 {
       font-size: 28px;
-      color: #2e8b57;
+      color: #27ae60; /* Verde vibrante */
       margin-bottom: 20px;
     }
 
-    /* Estilo do Parágrafo */
-    .section p {
+    .main-section p {
       font-size: 18px;
-      color: #333;
-      line-height: 1.6;
+      color: #ddd;
       margin-bottom: 30px;
     }
 
-    /* Botões */
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
+    .main-section .cta {
+      font-size: 20px;
+      color: #ff6b6b;
+      font-weight: bold;
     }
 
-    .button-container a {
-      background-color: #ff6b6b;
-      color: white;
-      padding: 15px 30px;
+    .main-section .cta a {
       text-decoration: none;
-      font-size: 16px;
+      color: #fff;
       font-weight: bold;
-      border-radius: 5px;
+      padding: 12px 30px;
+      background: #ff6b6b;
+      border-radius: 6px;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .main-section .cta a:hover {
+      background: #e55050;
+    }
+
+    /* Benefícios Principais */
+    .benefits-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit-item {
+      background-color: #34495e;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      background-color: #2ecc71;
+      transform: translateY(-8px);
+    }
+
+    .benefit-item h4 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .benefit-item p {
+      color: #ddd;
+      font-size: 16px;
+    }
+
+    /* Lista de Para quem é este curso */
+    .who-is-this-for {
+      margin-top: 40px;
+      padding: 30px;
+      background-color: #2c3e50;
+      border-radius: 8px;
+    }
+
+    .who-is-this-for h3 {
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .who-is-this-for ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .who-is-this-for ul li {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 12px;
+    }
+
+    /* Contato e Dúvidas */
+    .contact-info {
+      background: linear-gradient(135deg, #16a085, #2c3e50);
+      padding: 50px 20px;
+      margin-top: 60px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-info h3 {
+      color: #fff;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .contact-info a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     /* Rodapé */
     footer {
-      background-color: #2e8b57;
-      color: white;
       text-align: center;
       padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
       font-size: 14px;
+      border-top: 4px solid #27ae60;
     }
 
-    /* Responsividade para dispositivos pequenos */
-    @media (max-width: 600px) {
-      .section h2 {
-        font-size: 24px;
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .main-section h2 {
+        font-size: 30px;
       }
 
-      .button-container a {
+      .benefits-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .who-is-this-for ul li {
+        font-size: 16px;
+      }
+
+      .cta a {
+        padding: 10px 25px;
         font-size: 14px;
-        padding: 12px 24px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Seção de Boas-Vindas -->
-  <section class="section">
-    <h2>Bem-vindo ao Portal Evolução!</h2>
-    <p>Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026.</p>
-    <p>Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender!</p>
-    <p><strong>Este site pode conter links afiliados.</strong> Ao acessar o curso, você será direcionado ao site oficial do produtor. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
-  </section>
-
-  <!-- Seção Portal Evolução -->
-  <section class="section">
+  <!-- Seção Principal do Corpo -->
+  <section class="main-section">
     <h2>Portal Evolução</h2>
-    <p><strong>Profissional e confiável</strong></p>
-    <p><strong>Focado em Pilates e bem-estar</strong></p>
-    <p><strong>Pensando no futuro (expansão para outros cursos)</strong></p>
+    <p><strong>🔹 Profissional e confiável</strong></p>
+    <p><strong>🔹 Focado em Pilates e bem-estar</strong></p>
+    <p><strong>🔹 Pensando no futuro (expansão para outros cursos)</strong></p>
   </section>
 
-  <!-- Seção VOLL+ Pilates -->
-  <section class="section">
-    <h2>VOLL+ Pilates</h2>
-    <img src="https://images.pexels.com/photos/3757955/pexels-photo-3757955.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cursos de Pilates" style="max-width: 100%; border-radius: 8px;">
-    <p>A VOLL+ é uma plataforma que reúne os melhores cursos certificados de Pilates, com uma assinatura única e acesso imediato a todos os cursos online, além de novas atualizações mensais.</p>
-    <p><strong>A missão da VOLL</strong> é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, por meio de ensino de excelência e soluções inovadoras.</p>
+  <!-- Seção de VOLL+ Pilates -->
+  <section class="main-section">
+    <h3>VOLL+ Pilates</h3>
+    <p><strong>Sobre o Produto:</strong></p>
+    <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais.</p>
+    <p><strong>A missão da VOLL</strong> é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras.</p>
+    <div class="cta">
+      <a href="https://www.vollpilates.com" target="_blank">Descubra mais sobre VOLL+</a>
+    </div>
   </section>
 
-  <!-- Seção Benefícios -->
-  <section class="section">
-    <h2>3 Benefícios Principais</h2>
-    <ul>
-      <li>✅ Aprenda do zero ao avançado: Ideal para iniciantes e profissionais que desejam se especializar.</li>
-      <li>✅ Aulas práticas e didáticas: Conteúdo claro, com demonstrações reais dos exercícios.</li>
-      <li>✅ Certificação reconhecida: Receba certificado ao concluir o curso e agregue mais valor ao seu currículo profissional.</li>
-    </ul>
+  <!-- Benefícios Principais -->
+  <section class="main-section">
+    <h3>3 Benefícios Principais</h3>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <h4>✅ Aprenda do Zero ao Avançado</h4>
+        <p>Ideal tanto para iniciantes quanto para profissionais que desejam se especializar.</p>
+      </div>
+      <div class="benefit-item">
+        <h4>✅ Aulas Práticas e Didáticas</h4>
+        <p>Conteúdo claro, com demonstrações reais dos exercícios, facilitando a aplicação imediata.</p>
+      </div>
+      <div class="benefit-item">
+        <h4>✅ Certificação Reconhecida</h4>
+        <p>Receba certificado ao concluir o curso e agregue mais valor ao seu currículo profissional.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Seção Para Quem É Esse Curso -->
-  <section class="section">
-    <h2>Para quem é este curso?</h2>
+  <!-- Para quem é este curso -->
+  <section class="who-is-this-for">
+    <h3>Para quem é este curso?</h3>
     <ul>
       <li>✔ Profissionais de Educação Física</li>
       <li>✔ Fisioterapeutas</li>
@@ -131,31 +244,6 @@
     </ul>
   </section>
 
-  <!-- Seção de Botões de Acesso Rápido -->
-  <section class="section">
-    <h2>Acesso rápido aos cursos</h2>
-    <div class="button-container">
-      <a href="https://go.hotmart.com/P103425796F" target="_blank">Página de Vendas</a>
-      <a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank">Checkout</a>
-      <a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank">VOLL+</a>
-      <a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank">Checkout 2ª Semana</a>
-    </div>
-  </section>
-
-  <!-- Seção de Contatos -->
-  <section class="section">
-    <h2>Dúvidas e Contatos</h2>
-    <p>Contas e formas de recebimento oficiais do GRUPO VOLL:</p>
-    <p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
-    <p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
-    <p>📧 Gmail: <a href="mailto:jph4ttori@gmail.com">jph4ttori@gmail.com</a> | 📞 Cel: (11) 99369-7721</p>
-    <p>⚠️ Sua segurança é prioridade. Confirme sempre antes de pagar.</p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    © 2026 Portal Evolução · Todos os direitos reservados
-  </footer>
-
-</body>
-</html>
+  <!-- Contato e Dúvidas -->
+  <section class="contact-info">
+    <h3>Dúvidas e Cont
