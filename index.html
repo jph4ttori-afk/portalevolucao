@@ -2,119 +2,239 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-
-  <title>Portal Evolução | Saúde em Movimento</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cursos testados e aprovados para transformar sua saúde, carreira e qualidade de vida em 2026.">
+  <title>Portal Evolução | Pilates & Bem-Estar</title>
+  <meta name="description" content="Portal Evolução: Cursos de Pilates, relaxamento e bem-estar. Aprenda e pratique com dicas essenciais e músicas relaxantes.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- ========= GOOGLE ADS TAG (ATIVA) ========= -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-
-    gtag('js', new Date());
-    gtag('config', 'AW-17808283080');
-  </script>
-
-  <!-- ========= EVENTO DE CONVERSÃO ========= -->
-  <script>
-    function registrarConversao() {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17808283080/CONVERSAO_PADRAO',
-        'event_callback': function () {
-          console.log('Conversão registrada com sucesso');
-        }
-      });
-    }
-  </script>
-
-  <!-- ========= ESTILOS ========= -->
   <style>
-    body {
+    /* Reset básico */
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(180deg, #000000, #2b2b2b);
-      color: #f0f0f0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
     }
 
+    body {
+      background: linear-gradient(135deg, #000000, #222222);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Cabeçalho com balões */
     header {
-      padding: 80px 20px;
+      position: relative;
+      height: 300px;
+      background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #000, #1a1a1a, #2f2f2f);
-      border-bottom: 3px solid #00ffcc;
-      box-shadow: 0 0 30px #00ffcc;
+      overflow: hidden;
     }
 
     header h1 {
-      font-size: 3.2em;
-      margin: 0;
-      padding: 22px 45px;
-      border-radius: 70px;
-      background: radial-gradient(circle at top, #6b4f2a, #3e2a14);
-      box-shadow: 0 0 35px #00ffcc;
-      display: inline-block;
+      font-size: 3rem;
+      color: #ff0000;
+      text-shadow: 0 0 10px #ff0000;
+      margin-bottom: 10px;
     }
 
-    header h1 span {
-      background: linear-gradient(90deg, #2ecc71, #27ae60, #2ecc71);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      text-shadow: 0 0 5px #ff0000;
     }
 
+    /* Efeito balões */
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background: #ff0000;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-100px); }
+    }
+
+    /* Conteúdo principal */
     main {
-      padding: 60px 20px;
-      text-align: center;
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    button.cta {
-      font-size: 1.2em;
-      padding: 18px 40px;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(90deg, #00ffcc, #00cc99);
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ff0000;
+      text-shadow: 0 0 5px #ff0000;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ff0000;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #ff0000;
+    }
+
+    /* Botões neon */
+    .btn-neon {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border: 2px solid #ff0000;
+      border-radius: 5px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+    }
+
+    .btn-neon:hover {
+      background: #ff0000;
       color: #000;
-      box-shadow: 0 0 20px #00ffcc;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000;
+      transform: scale(1.1);
     }
 
-    button.cta:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 35px #00ffcc;
+    /* Músicas relaxamento */
+    audio {
+      margin: 10px 0;
+      width: 100%;
+      outline: none;
     }
 
+    /* Rodapé */
     footer {
-      padding: 30px;
+      position: relative;
+      background: linear-gradient(90deg, #ff0000, #ff5555, #ff0000);
+      color: #000;
       text-align: center;
-      font-size: 0.9em;
-      color: #aaa;
+      padding: 30px 20px;
+      font-weight: bold;
+      text-shadow: 0 0 5px #fff;
+      overflow: hidden;
+    }
+
+    footer::before, footer::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #fff, #ff0000, #fff);
+      animation: shine 2s linear infinite;
+    }
+
+    footer::before { top: 0; }
+    footer::after { bottom: 0; }
+
+    @keyframes shine {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
     }
   </style>
 </head>
-
 <body>
 
+  <!-- Cabeçalho -->
   <header>
-    <h1>
-      Portal <span>Evolução</span>
-    </h1>
-    <p>Saúde em movimento para o futuro</p>
+    <h1>Portal Evolução</h1>
+    <p>Cursos de Pilates & Bem-Estar</p>
   </header>
 
-  <main>
-    <h2>Transforme sua saúde e carreira</h2>
-    <p>Cursos validados, práticos e focados em resultados reais.</p>
+  <!-- Balões animados -->
+  <script>
+    const header = document.querySelector('header');
+    for(let i = 0; i < 30; i++) {
+      let balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = (5 + Math.random() * 5) + 's';
+      balloon.style.width = (20 + Math.random() * 20) + 'px';
+      balloon.style.height = (30 + Math.random() * 30) + 'px';
+      header.appendChild(balloon);
+    }
+  </script>
 
-    <!-- BOTÃO QUE DISPARA A CONVERSÃO -->
-    <button class="cta" onclick="registrarConversao()">
-      Quero me inscrever
-    </button>
+  <!-- Conteúdo -->
+  <main>
+    <!-- Informações importantes -->
+    <section>
+      <h2>5 Dicas Essenciais de Pilates</h2>
+      <ul>
+        <li>Mantenha sempre a postura correta para evitar lesões.</li>
+        <li>Respire profundamente e de forma controlada em cada movimento.</li>
+        <li>Concentre-se na qualidade do movimento, não na quantidade.</li>
+        <li>Use acessórios como bolas e faixas para potencializar os exercícios.</li>
+        <li>Pratique regularmente e com paciência para ver resultados consistentes.</li>
+      </ul>
+    </section>
+
+    <!-- Músicas relaxamento -->
+    <section>
+      <h2>Músicas de Relaxamento</h2>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+      </audio>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <!-- Botões de link rápido -->
+    <section>
+      <h2>Links Rápidos</h2>
+      <a href="#cursos" class="btn-neon">Cursos</a>
+      <a href="#relaxamento" class="btn-neon">Relaxamento</a>
+      <a href="#contato" class="btn-neon">Contato</a>
+      <a href="#sobre" class="btn-neon">Sobre Nós</a>
+    </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
-    © 2026 — Portal Evolução. Todos os direitos reservados.
+    &copy; 2025 Portal Evolução - Todos os direitos reservados
   </footer>
 
 </body>
