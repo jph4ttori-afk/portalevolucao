@@ -140,7 +140,7 @@ footer {
   border-radius: 10px;
   padding:15px;
   margin:15px 0;
-  color:#ffff66; /* amarelo suave chamativo */
+  color:#ffff66;
   font-weight:bold;
 }
 .preco span {
@@ -171,4 +171,93 @@ footer {
 
     <div class="preco">
       <h3>ESCOLHA SUA ASSINATURA DA VOLL+</h3>
-      <p>O MAIS VANTAJOSO: <span>R$360 de d
+      <p>O MAIS VANTAJOSO: <span>R$360 de desconto</span></p>
+      <p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
+      <p>Curso de sua escolha com certificado</p>
+      <p>Acesso à todos os cursos dentro da plataforma VOLL+</p>
+      <p>Conteúdos novos todos os meses</p>
+      <p>*assinatura válida por um ano com renovação automática</p>
+      <p><strong>R$ 149/mês</strong> — PLANO ANUAL SEM COMPROMETER O LIMITE DO CARTÃO DE CRÉDITO</p>
+      <p><strong>R$ 126/mês</strong> — PLANO ANUAL PARCELADO NO CARTÃO DE CRÉDITO EM ATÉ 12X</p>
+    </div>
+
+    <h3>3 Benefícios Principais</h3>
+    <ul>
+      <li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
+      <li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
+      <li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
+    </ul>
+
+    <h3>Para quem é esse curso?</h3>
+    <ul>
+      <li>Profissionais de Educação Física</li>
+      <li>Fisioterapeutas</li>
+      <li>Estudantes da área da saúde</li>
+      <li>Pessoas que querem trabalhar com Pilates</li>
+      <li>Quem busca qualidade de vida e conhecimento corporal</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+<h2>5 Dicas Essenciais de Pilates</h2>
+<ul>
+<li>Mantenha postura correta para evitar lesões</li>
+<li>Respire profundamente em cada movimento</li>
+<li>Priorize qualidade, não quantidade</li>
+<li>Use acessórios para potencializar exercícios</li>
+<li>Seja consistente e paciente com seu progresso</li>
+</ul>
+</section>
+
+<section>
+<h2>Músicas de Relaxamento</h2>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
+</section>
+
+<section>
+<h2>Links Rápidos</h2>
+<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
+<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
+<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
+<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
+</section>
+
+<section>
+<h2>Contato & Segurança</h2>
+<div class="contact-info">
+<p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
+<p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
+<p>📞 Cel: [11] 99369-7721</p>
+<p>⚠️ Não aceitamos depósitos ou transferências em nome de terceiros ou pessoas físicas. Confirme sempre antes de pagar.</p>
+<p>[Gmail: jph4ttori@gmail.com]</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+&copy; 2025 Portal Evolução — Todos os direitos reservados
+</footer>
+
+<script>
+// Bolhas animadas no cabeçalho
+const header = document.querySelector('header');
+const totalBalloons = window.innerWidth < 768 ? 15 : 25;
+for(let i=0;i<totalBalloons;i++){
+  const balloon = document.createElement('div');
+  balloon.className='balloon';
+  balloon.style.left=Math.random()*100+'vw';
+  balloon.style.width=20+Math.random()*20+'px';
+  balloon.style.height=30+Math.random()*30+'px';
+  balloon.style.animationDuration=6+Math.random()*6+'s';
+  header.appendChild(balloon);
+}
+</script>
+
+</body>
+</html>
