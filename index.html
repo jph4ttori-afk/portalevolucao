@@ -9,8 +9,8 @@
 
 /* Corpo do site */
 body { 
-  background:#1e1e1e; /* grafite escuro */
-  color:#fff; /* texto branco brilhante */
+  background:#1e1e1e;
+  color:#fff;
   line-height:1.6; 
   font-size:16px; 
 }
@@ -73,7 +73,7 @@ p, li { margin-bottom:10px; color:#fff; text-shadow: 0 0 4px #ff4444; }
   display:inline-block; 
   margin:5px; 
   padding:12px 20px; 
-  color:#fff; 
+  color:#fff;
   text-decoration:none; 
   font-weight:bold; 
   border:2px solid #ff0000; 
@@ -111,14 +111,16 @@ footer {
   header p{ font-size:1rem;} 
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
+  #voll-produto { flex-direction: column; align-items: center; }
+  #voll-produto img { margin-bottom:20px; }
 }
 
-/* Seção VOLL+ lado a lado */
+/* Seção VOLL+ lado a lado com espaçamento */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
   align-items:flex-start;
-  gap:20px;
+  gap:30px; /* espaçamento maior entre imagem e texto */
 }
 #voll-produto img {
   flex:1 1 380px;
@@ -169,7 +171,6 @@ footer {
   </div>
 </section>
 
-<!-- Resto do site continua igual -->
 <section>
 <h2>5 Dicas Essenciais de Pilates</h2>
 <ul>
