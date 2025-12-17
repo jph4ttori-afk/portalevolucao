@@ -22,6 +22,8 @@ header {
 header h1 { font-size:3rem; color:#ff0000; text-shadow:0 0 20px #ff0000; animation:fadeIn 1.5s ease-in-out; }
 header p { font-size:1.2rem; max-width:850px; text-shadow:0 0 5px #ff0000; margin-top:10px; animation:fadeIn 2s ease-in-out; }
 
+@keyframes fadeIn { from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);} }
+
 /* Balões avançados */
 .balloon { position:absolute; background:#ff0000; border-radius:50%; opacity:0.6; pointer-events:none; transform: translateZ(0); transition: transform 0.1s linear; }
 
@@ -49,7 +51,7 @@ ul li { margin-bottom:15px; padding-left:25px; position:relative; opacity:0; tra
 ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
 /* Botões neon avançado */
-.btn-neon { display:inline-block; margin:10px; padding:15px 25px; color:#ff0000; text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center; box-shadow:0 0 15px #ff0000,0 0 30px #ff0000; animation: neonPulse 1.5s ease-in-out infinite alternate; }
+.btn-neon { display:inline-block; margin:10px; padding:15px 25px; color:#ff0000; text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center; box-shadow:0 0 15px #ff0000,0 0 30px #ff0000; animation: neonPulse 1.5s ease-in-out infinite alternate; transition:0.3s; }
 .btn-neon:hover { background:#ff0000; color:#000; transform:scale(1.12); box-shadow:0 0 50px #ff0000,0 0 100px #ff4444; }
 @keyframes neonPulse { from {box-shadow:0 0 10px #ff0000,0 0 20px #ff0000;} to {box-shadow:0 0 30px #ff4444,0 0 60px #ff4444;} }
 
@@ -62,6 +64,14 @@ footer::before, footer::after { content:''; position:absolute; width:100%; heigh
 footer::before{top:0;} footer::after{bottom:0;}
 @keyframes shine{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
 .contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
+
+/* Responsividade */
+@media(max-width:768px){
+  header h1{ font-size:2.2rem;}
+  header p{ font-size:1rem;}
+  .btn-neon{padding:12px 20px; font-size:0.9rem;}
+  section{padding:15px;}
+}
 </style>
 </head>
 <body>
@@ -173,6 +183,10 @@ window.addEventListener('load',showSections);
 
   <section>
     <h2>Links Rápidos</h2>
+    <a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
+    <a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
+    <a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
+    <a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
     <a href="#cursos" class="btn-neon">Cursos</a>
     <a href="#relaxamento" class="btn-neon">Relaxamento</a>
     <a href="#sobre" class="btn-neon">Sobre</a>
@@ -193,5 +207,6 @@ window.addEventListener('load',showSections);
 <footer>
   &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
+
 </body>
 </html>
