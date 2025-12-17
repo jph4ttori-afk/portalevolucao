@@ -11,81 +11,100 @@
 </header>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-header {
-  background: linear-gradient(135deg, #1a1a1a, #121212);
-  padding: 40px 20px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-  position: relative;
-  overflow: hidden;
-}
+  header {
+    background: linear-gradient(135deg, #2e8b57, #1c6e3f);
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInHeader 1s ease-out;
+  }
 
-.header-container h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 36px;
-  color: #f0f0f0;
-  margin: 0;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-.header-container h1 span {
-  color: #27ae60;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #ccc;
-  margin-top: 10px;
-}
-
-.header-buttons {
-  margin-top: 25px;
-}
-
-.header-buttons .btn {
-  display: inline-block;
-  margin: 10px 8px;
-  padding: 12px 28px;
-  background-color: #ff6b6b;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/* Animação sobe/desce */
-.header-buttons .btn:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.7);
-  background-color: #e55050;
-}
-
-/* Pequena animação para o título também */
-.header-container h1 {
-  transition: all 0.4s ease;
-}
-
-.header-container h1:hover {
-  transform: translateY(-5px);
-  color: #2ecc71;
-}
-
-@media (max-width: 600px) {
   .header-container h1 {
-    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
   }
+
+  .header-container h1 span {
+    color: #27ae60;
+  }
+
+  /* Efeito de Hover nas Letras */
+  .header-container h1:hover {
+    transform: translateY(-10px);
+    color: #2ecc71;
+  }
+
   .subtitle {
-    font-size: 16px;
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 10px;
+    transition: color 0.3s ease;
   }
+
+  /* Efeito de Hover na Subtítulo */
+  .subtitle:hover {
+    color: #27ae60;
+  }
+
+  .header-buttons {
+    margin-top: 30px;
+  }
+
   .header-buttons .btn {
-    font-size: 14px;
-    padding: 10px 22px;
+    display: inline-block;
+    margin: 10px 12px;
+    padding: 12px 28px;
+    background-color: #ff6b6b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
   }
-}
+
+  /* Efeito de Hover nos Botões */
+  .header-buttons .btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+    background-color: #e55050;
+  }
+
+  /* Animação suave para a entrada do cabeçalho */
+  @keyframes fadeInHeader {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsividade para dispositivos pequenos */
+  @media (max-width: 600px) {
+    .header-container h1 {
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+    }
+
+    .header-buttons .btn {
+      font-size: 14px;
+      padding: 10px 22px;
+    }
+  }
 </style>
