@@ -9,138 +9,141 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --neon: #00ffcc;
-  --dark: #0b0b0b;
-  --gray: #1e1e1e;
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(180deg,#000,#2a2a2a);
+  color:#eaeaea;
 }
 
-/* RESET */
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #000, #2b2b2b);
-  color: #eaeaea;
-}
-
-/* HEADER COM NEON */
-header {
-  padding: 90px 20px;
-  text-align: center;
+/* HEADER */
+header{
+  padding:90px 20px;
+  text-align:center;
   background:
-    repeating-linear-gradient(
-      45deg,
-      #0f3d2e,
-      #0f3d2e 10px,
-      #0b2f23 10px,
-      #0b2f23 20px
-    );
+    repeating-linear-gradient(45deg,#0f3d2e,#0f3d2e 10px,#0b2f23 10px,#0b2f23 20px);
 }
 
-header h1 {
-  font-size: 48px;
-  color: var(--neon);
-  text-shadow:
-    0 0 5px var(--neon),
-    0 0 15px var(--neon),
-    0 0 30px var(--neon);
-  padding: 20px 40px;
-  border: 3px solid var(--neon);
-  border-radius: 60px;
-  display: inline-block;
-  animation: pulse 2s infinite;
+/* PORTAL EVOLUÇÃO */
+.logo{
+  display:inline-block;
+  padding:30px 50px;
+  border:3px solid #00ffcc;
+  border-radius:60px;
+  background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+  background-size:cover;
+  box-shadow:0 0 30px #00ffcc;
 }
 
-header p {
-  margin-top: 20px;
-  font-size: 20px;
-  opacity: 0.9;
+.logo h1{
+  margin:0;
+  font-size:48px;
+  background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+  background-size:cover;
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 10px #00ffcc;
 }
 
-/* SECTIONS */
-section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 20px;
+/* FRASE */
+.subtitle{
+  margin-top:30px;
+  display:inline-block;
+  padding:18px 40px;
+  background:#fff;
+  color:#000;
+  border-radius:40px;
+  border:2px solid #00ffcc;
+  box-shadow:0 0 20px #00ffcc;
+  font-size:20px;
 }
 
-h2 {
-  color: var(--neon);
-  font-size: 34px;
+/* SEÇÃO JANELA */
+.window-section{
+  background-image:url('https://images.unsplash.com/photo-1503264116251-35a269479413');
+  background-size:cover;
+  padding:100px 20px;
+}
+
+.window{
+  max-width:900px;
+  margin:auto;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(6px);
+  border:3px solid #00ffcc;
+  border-radius:30px;
+  padding:50px;
+  box-shadow:0 0 40px rgba(0,255,204,0.6);
+}
+
+.window h2{
+  color:#00ffcc;
+  font-size:36px;
+}
+
+/* BLOCO PRETO NEON */
+.impact{
+  margin:100px auto;
+  max-width:900px;
+  background:#000;
+  border:3px solid #00ffcc;
+  border-radius:25px;
+  padding:50px;
+  box-shadow:0 0 40px #00ffcc;
+  text-align:center;
+}
+
+.impact p{
+  font-size:20px;
+  line-height:1.7;
+}
+
+/* BOTÕES */
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.buttons a{
+  text-decoration:none;
+  padding:30px;
+  border-radius:25px;
+  border:2px solid #00ffcc;
+  color:#00ffcc;
+  box-shadow:0 0 20px #00ffcc;
+  transition:.4s;
+}
+
+.buttons a:hover{
+  background:#00ffcc;
+  color:#000;
+  transform:scale(1.08);
 }
 
 /* IMAGENS */
-.image-banner {
-  width: 100%;
-  height: 380px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  margin: 60px 0;
-  box-shadow: 0 0 40px rgba(0,255,204,0.25);
+.images{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+  margin:100px auto;
+  max-width:1200px;
 }
 
-/* BENEFITS */
-.benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap: 30px;
+.images img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:25px;
+  box-shadow:0 0 30px rgba(0,255,204,0.4);
 }
 
-.benefits div {
-  background: rgba(0,0,0,0.7);
-  border: 2px solid var(--neon);
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0,255,204,0.25);
-}
-
-/* BOTÕES NEON */
-a.button {
-  display: inline-block;
-  margin: 15px;
-  padding: 18px 38px;
-  color: var(--neon);
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 50px;
-  border: 2px solid var(--neon);
-  box-shadow: 0 0 15px rgba(0,255,204,0.6);
-  transition: all 0.4s ease;
-}
-
-a.button:hover {
-  background: var(--neon);
-  color: #000;
-  box-shadow: 0 0 40px rgba(0,255,204,0.9);
-  transform: scale(1.1);
-}
-
-/* MUSIC PLAYER */
-.music {
-  text-align: center;
-}
-
-iframe {
-  border-radius: 16px;
-  margin-top: 20px;
-}
-
-/* FOOTER */
-footer {
-  background: #000;
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* ANIMAÇÃO */
-@keyframes pulse {
-  0% { box-shadow: 0 0 10px var(--neon); }
-  50% { box-shadow: 0 0 30px var(--neon); }
-  100% { box-shadow: 0 0 10px var(--neon); }
+footer{
+  background:#000;
+  padding:30px;
+  text-align:center;
 }
 </style>
 </head>
@@ -148,53 +151,40 @@ footer {
 <body>
 
 <header>
-<h1>Portal Evolução</h1>
-<p>Conhecimento, saúde e bem-estar em movimento</p>
+  <div class="logo">
+    <h1>Portal Evolução</h1>
+  </div>
+  <div class="subtitle">
+    Conhecimento, Saúde e bem-estar em movimento!
+  </div>
 </header>
 
-<section>
-<h2>Bem-vindo</h2>
-<p>Cursos testados, aprovados e recomendados para transformar sua vida e carreira.</p>
+<section class="window-section">
+  <div class="window">
+    <h2>Bem-vindo</h2>
+    <p>Cursos testados, aprovados e recomendados para transformar sua vida e carreira, em 2026!</p>
+  </div>
 </section>
 
-<div class="image-banner" style="background-image:url('https://images.unsplash.com/photo-1554284126-aa88f22d8b72');"></div>
-
-<section>
-<h2>VOLL+ Pilates</h2>
-
-<div class="benefits">
-  <div>
-    <h3>🏃 Saúde em movimento</h3>
-    <p>Conteúdos práticos focados no corpo e na performance.</p>
-  </div>
-  <div>
-    <h3>🧘‍♀️ Bem-estar completo</h3>
-    <p>Treinos, pilates e consciência corporal.</p>
-  </div>
-  <div>
-    <h3>📜 Certificação</h3>
-    <p>Reconhecimento profissional com qualidade.</p>
-  </div>
+<div class="impact">
+  <p>
+    A prática regular de atividade física reduz dores, melhora o sono, aumenta a produtividade,
+    fortalece a mente e prolonga a qualidade de vida.  
+    Investir em conhecimento corporal hoje evita custos com saúde amanhã.
+  </p>
 </div>
+
+<section class="buttons">
+  <a href="#">Pilates</a>
+  <a href="#">🏃 Saúde em movimento</a>
+  <a href="#">🧘‍♀️ Bem-estar completo</a>
+  <a href="#">📜 Certificação</a>
 </section>
 
-<div class="image-banner" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65');"></div>
-
-<section style="text-align:center;">
-<h2>Acesso rápido</h2>
-<a class="button" href="https://go.hotmart.com/P103425796F" target="_blank">Página de Vendas</a>
-<a class="button" href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank">Checkout</a>
-<a class="button" href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank">VOLL+</a>
-</section>
-
-<section class="music">
-<h2>🎧 Canal Relaxante</h2>
-<p>Ambiente sonoro para foco e bem-estar</p>
-
-<iframe style="border-radius:12px" 
-src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" 
-width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-</iframe>
+<section class="images">
+  <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b72">
+  <img src="https://images.unsplash.com/photo-1571019613914-85f342c1d1a2">
+  <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07b">
 </section>
 
 <footer>
