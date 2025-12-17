@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+
   <title>Portal Evolução | Saúde em Movimento</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cursos testados e aprovados para transformar sua saúde, carreira e qualidade de vida em 2026.">
 
@@ -10,7 +12,8 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
+
     gtag('js', new Date());
     gtag('config', 'AW-17808283080');
   </script>
@@ -19,11 +22,15 @@
   <script>
     function registrarConversao() {
       gtag('event', 'conversion', {
-        'send_to': 'AW-17808283080/CONVERSAO_PADRAO'
+        'send_to': 'AW-17808283080/CONVERSAO_PADRAO',
+        'event_callback': function () {
+          console.log('Conversão registrada com sucesso');
+        }
       });
     }
   </script>
 
+  <!-- ========= ESTILOS ========= -->
   <style>
     body {
       margin: 0;
@@ -41,7 +48,7 @@
     }
 
     header h1 {
-      font-size: 3.5em;
+      font-size: 3.2em;
       margin: 0;
       padding: 22px 45px;
       border-radius: 70px;
@@ -52,4 +59,63 @@
 
     header h1 span {
       background: linear-gradient(90deg, #2ecc71, #27ae60, #2ecc71);
-      
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    main {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    button.cta {
+      font-size: 1.2em;
+      padding: 18px 40px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #00ffcc, #00cc99);
+      color: #000;
+      box-shadow: 0 0 20px #00ffcc;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button.cta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #00ffcc;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      Portal <span>Evolução</span>
+    </h1>
+    <p>Saúde em movimento para o futuro</p>
+  </header>
+
+  <main>
+    <h2>Transforme sua saúde e carreira</h2>
+    <p>Cursos validados, práticos e focados em resultados reais.</p>
+
+    <!-- BOTÃO QUE DISPARA A CONVERSÃO -->
+    <button class="cta" onclick="registrarConversao()">
+      Quero me inscrever
+    </button>
+  </main>
+
+  <footer>
+    © 2026 — Portal Evolução. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
