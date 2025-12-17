@@ -9,8 +9,8 @@
 
 /* Corpo do site */
 body { 
-  background:#1e1e1e; /* grafite escuro */
-  color:#fff; /* texto branco brilhante */
+  background:#1e1e1e;
+  color:#fff;
   line-height:1.6; 
   font-size:16px; 
 }
@@ -113,11 +113,9 @@ footer {
   section{padding:15px;} 
   #voll-produto { flex-direction: column; align-items: center; }
   #voll-produto img { margin-bottom:20px; }
-  #voll-precos { flex-direction: column; align-items: center; }
-  #voll-precos img { margin-bottom:20px; }
 }
 
-/* Seção VOLL+ lado a lado */
+/* Seção VOLL+ lado a lado com espaçamento */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
@@ -135,27 +133,21 @@ footer {
   flex:2 1 500px;
 }
 
-/* Seção Preços lado a lado */
-#voll-precos {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:flex-start;
-  gap:30px;
-  margin-top:20px;
+/* Estilo dos preços */
+.preco {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  padding:15px;
+  margin:15px 0;
+  color:#ffff66; /* amarelo suave chamativo */
+  font-weight:bold;
 }
-#voll-precos img {
-  flex:1 1 380px;
-  max-width:380px;
-  border:4px solid #ff8800;
-  border-radius:12px;
-  box-shadow:0 0 18px #ffbb44;
+.preco span {
+  color:#ff6666;
+  font-size:1.2rem;
+  font-weight:bold;
 }
-#voll-precos .texto-precos {
-  flex:2 1 500px;
-}
-.texto-precos h2 { color: #ffdddd; text-shadow: 0 0 6px #ff8888; }
-.preco-item h3 { color: #fff2aa; text-shadow: 0 0 6px #ffcc66; margin-top:15px; }
-.preco-item p { color: #ffeebb; text-shadow: 0 0 4px #ffaaaa; font-weight:bold; }
 </style>
 </head>
 <body>
@@ -169,103 +161,14 @@ footer {
 
 <!-- Seção VOLL+ com imagem ao lado -->
 <section id="voll-produto">
-  <img src="produto.png" alt="Imagem do Produto VOLL+ Pilates">
+  <img src="produto.png.png" alt="Imagem do Produto VOLL+ Pilates">
   <div class="texto-produto">
     <h2>VOLL+ Pilates - Sobre o Produto</h2>
     <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
     <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
     <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
     <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
-  </div>
-</section>
 
-<!-- Seção Preços -->
-<section id="voll-precos">
-  <img src="produto.png" alt="Imagem do Produto VOLL+">
-  <div class="texto-precos">
-    <h2>Escolha Sua Assinatura da VOLL+</h2>
-
-    <div class="preco-item">
-      <h3>O MAIS VANTAJOSO</h3>
-      <p>R$360 de desconto</p>
-      <p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
-      <p>Curso de sua escolha com certificado</p>
-      <p>Acesso à todos os cursos dentro da plataforma VOLL+</p>
-      <p>Conteúdos novos todos os meses</p>
-      <p>*Assinatura válida por um ano com renovação automática</p>
-    </div>
-
-    <div class="preco-item">
-      <h3>Plano Anual Sem Comprometer o Limite do Cartão de Crédito</h3>
-      <p>R$149/mês</p>
-    </div>
-
-    <div class="preco-item">
-      <h3>Plano Anual Parcelado no Cartão de Crédito em até 12x</h3>
-      <p>R$126/mês</p>
-    </div>
-  </div>
-</section>
-
-<section>
-<h2>5 Dicas Essenciais de Pilates</h2>
-<ul>
-<li>Mantenha postura correta para evitar lesões</li>
-<li>Respire profundamente em cada movimento</li>
-<li>Priorize qualidade, não quantidade</li>
-<li>Use acessórios para potencializar exercícios</li>
-<li>Seja consistente e paciente com seu progresso</li>
-</ul>
-</section>
-
-<section>
-<h2>Músicas de Relaxamento</h2>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
-<audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
-</section>
-
-<section>
-<h2>Links Rápidos</h2>
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
-<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
-<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
-<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" class="btn-neon">Checkout 2ª Semana</a>
-</section>
-
-<section>
-<h2>Contato & Segurança</h2>
-<div class="contact-info">
-<p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
-<p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
-<p>📞 Cel: [11] 99369-7721</p>
-<p>⚠️ Não aceitamos depósitos ou transferências em nome de terceiros ou pessoas físicas. Confirme sempre antes de pagar.</p>
-<p>[Gmail: jph4ttori@gmail.com]</p>
-</div>
-</section>
-
-</main>
-
-<footer>
-&copy; 2025 Portal Evolução — Todos os direitos reservados
-</footer>
-
-<script>
-// Bolhas animadas no cabeçalho
-const header = document.querySelector('header');
-const totalBalloons = window.innerWidth < 768 ? 15 : 25;
-for(let i=0;i<totalBalloons;i++){
-  const balloon = document.createElement('div');
-  balloon.className='balloon';
-  balloon.style.left=Math.random()*100+'vw';
-  balloon.style.width=20+Math.random()*20+'px';
-  balloon.style.height=30+Math.random()*30+'px';
-  balloon.style.animationDuration=6+Math.random()*6+'s';
-  header.appendChild(balloon);
-}
-</script>
-
-</body>
-</html>
+    <div class="preco">
+      <h3>ESCOLHA SUA ASSINATURA DA VOLL+</h3>
+      <p>O MAIS VANTAJOSO: <span>R$360 de d
