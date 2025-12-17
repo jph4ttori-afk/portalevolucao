@@ -4,96 +4,114 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
-
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
 /* Corpo do site */
 body { 
-  background:#2c2c2c; 
-  color:#ffffff; 
+  background:#1e1e1e; /* grafite escuro */
+  color:#fff; /* texto branco brilhante */
   line-height:1.6; 
   font-size:16px; 
-  text-shadow: 0 0 6px #ff4444; /* Glow vermelho suave para todo o texto */
 }
 
 /* Cabeçalho */
 header {
-  position: relative;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff0000, #a60000);
-  overflow: hidden;
-  border-bottom: 4px solid #ff4444;
-  box-shadow: 0 0 20px #ff0000;
+  position:relative;
+  padding:50px 20px;
+  background: linear-gradient(90deg,#ff0000,#cc0000,#990000);
+  text-align:center;
+  box-shadow:0 0 20px #ff0000;
 }
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
+header h1 { 
+  font-size:3rem; 
+  margin-bottom:15px; 
+  color:#fff;
+  text-shadow: 0 0 10px #ff4444, 0 0 20px #ff5555;
 }
-header p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-shadow: 0 0 6px #ff8888;
-}
-.header-lines {
-  height: 4px;
-  width: 120px;
-  background: #ff4444;
-  margin: 15px auto;
-  border-radius: 2px;
-  box-shadow: 0 0 10px #ff8888;
+header p { 
+  max-width:800px; 
+  margin:auto; 
+  color:#fff;
+  text-shadow: 0 0 6px #ff4444;
 }
 
-/* Balões animados */
-header .balloon {
-  background: rgba(255,80,80,0.6);
-  border-radius: 50%;
-  position: absolute;
+/* Bolhas */
+.balloon {
+  position:absolute; 
+  background:#ff6666; /* vermelho suave */
+  border-radius:50%; 
+  opacity:0.5;
   animation: floatUp linear infinite;
 }
-@keyframes floatUp {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-50px); }
+@keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
+
+/* Imagem do produto */
+#produto-imagem img {
+  max-width: 100%;
+  width: 380px; 
+  height: auto;
+  border: 4px solid #ff0000;
+  border-radius: 12px;
+  box-shadow: 0 0 18px #ff4444;
+  display: block;
+  margin: 30px auto;
 }
 
-/* Seções do site */
+/* Conteúdo principal */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { 
-  margin-bottom:40px; 
-  padding:20px; 
-  border-radius:10px; 
-  background:rgba(255,0,0,0.05); 
+section { margin-bottom:40px; padding:20px; border-radius:10px; background:rgba(255,0,0,0.05); }
+h2 { 
+  font-size:2rem; 
+  margin-bottom:15px; 
+  border-bottom:2px solid #ff0000; 
+  display:inline-block; 
+  padding-bottom:5px; 
+  text-shadow: 0 0 6px #ff4444;
 }
-h2 { font-size:2rem; margin-bottom:15px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; text-shadow:0 0 6px #ff4444; }
 ul { list-style:none; margin-top:15px; }
 ul li { position:relative; padding-left:25px; margin-bottom:10px; }
 ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
-p, li { margin-bottom:10px; text-shadow:0 0 6px #ff4444; }
+p, li { margin-bottom:10px; color:#fff; text-shadow: 0 0 4px #ff4444; }
 
 /* Botões neon */
 .btn-neon {
-  display:inline-block; margin:5px; padding:12px 20px; 
-  color:#ffffff; /* Alterado para branco */
-  text-shadow: 0 0 6px #ff4444; /* Glow vermelho aplicado */
-  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
-  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
+  display:inline-block; 
+  margin:5px; 
+  padding:12px 20px; 
+  color:#fff; /* letras brancas */
+  text-decoration:none; 
+  font-weight:bold; 
+  border:2px solid #ff0000; 
+  border-radius:5px; 
+  text-align:center; 
+  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; 
+  transition:0.3s;
 }
-.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
+.btn-neon:hover { 
+  background:#ff0000; 
+  color:#fff; 
+  transform:scale(1.1); 
+  box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; 
+}
 
 /* Áudio */
 audio { width:100%; margin:10px 0; }
 
 /* Rodapé */
-footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; text-shadow:0 0 6px #ff4444; }
+footer { 
+  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); 
+  color:#fff; 
+  text-align:center; 
+  padding:25px 20px; 
+  font-weight:bold; 
+  box-shadow:0 0 15px #ff4444;
+}
 
 /* Contato */
-.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; text-shadow:0 0 6px #ff4444; }
+.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
 
+/* Responsivo */
 @media(max-width:768px){ 
   header h1{ font-size:2.2rem;} 
   header p{ font-size:1rem;} 
@@ -105,26 +123,15 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
 <body>
 
 <header>
-  <div class="header-lines"></div>
-  <h1>Portal Evolução</h1>
-  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
-  <div class="header-lines"></div>
+<h1>Portal Evolução</h1>
+<p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
 </header>
 
-<script>
-// Balões animados no header
-const header = document.querySelector('header');
-const totalBalloons = 10;
-for (let i = 0; i < totalBalloons; i++) {
-  const balloon = document.createElement('div');
-  balloon.className = 'balloon';
-  balloon.style.left = Math.random() * 100 + 'vw';
-  balloon.style.width = 20 + Math.random() * 25 + 'px';
-  balloon.style.height = 25 + Math.random() * 25 + 'px';
-  balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
-  header.appendChild(balloon);
-}
-</script>
+<!-- Imagem do Produto -->
+<section id="produto-imagem">
+  <img src="https://static-media.hotmart.com/IdHqM8_u1Rbbr6dRd_6vCCkSh6s=/295x165/smart/filters:quality(100)/hotmart/product_pictures/0f0414c4-3d42-4df1-8f9d-46906048c5d4/Imagem_Produto_600x600.png" 
+       alt="Imagem do Produto VOLL+ Pilates">
+</section>
 
 <main>
 
@@ -203,6 +210,21 @@ for (let i = 0; i < totalBalloons; i++) {
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
+
+<script>
+// Bolhas animadas no cabeçalho
+const header = document.querySelector('header');
+const totalBalloons = window.innerWidth < 768 ? 15 : 25;
+for(let i=0;i<totalBalloons;i++){
+  const balloon = document.createElement('div');
+  balloon.className='balloon';
+  balloon.style.left=Math.random()*100+'vw';
+  balloon.style.width=20+Math.random()*20+'px';
+  balloon.style.height=30+Math.random()*30+'px';
+  balloon.style.animationDuration=6+Math.random()*6+'s';
+  header.appendChild(balloon);
+}
+</script>
 
 </body>
 </html>
