@@ -34,6 +34,14 @@ header p {
   margin:auto; 
   color:#fff;
   text-shadow: 0 0 6px #ff4444;
+  animation: fadeFloat 2s ease-in-out forwards; /* animação adicionada */
+}
+
+/* Animação de fade + leve movimento */
+@keyframes fadeFloat {
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 0.5; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Bolhas */
@@ -47,17 +55,15 @@ header p {
 @keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
 
 /* Imagem do produto */
-#produto-imagem {
-  text-align: center;
-  margin-bottom: 30px;
-}
 #produto-imagem img {
-  max-width: 380px;
-  width: 100%;
+  max-width: 100%;
+  width: 380px; 
   height: auto;
   border: 4px solid #ff0000;
   border-radius: 12px;
   box-shadow: 0 0 18px #ff4444;
+  display: block;
+  margin: 30px auto;
 }
 
 /* Conteúdo principal */
@@ -81,7 +87,7 @@ p, li { margin-bottom:10px; color:#fff; text-shadow: 0 0 4px #ff4444; }
   display:inline-block; 
   margin:5px; 
   padding:12px 20px; 
-  color:#fff; 
+  color:#fff; /* letras brancas */
   text-decoration:none; 
   font-weight:bold; 
   border:2px solid #ff0000; 
@@ -119,7 +125,6 @@ footer {
   header p{ font-size:1rem;} 
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
-  #produto-imagem img { max-width: 100%; }
 }
 </style>
 </head>
@@ -132,14 +137,7 @@ footer {
 
 <main>
 
-<section>
-<h2>Portal Evolução</h2>
-<p>🔹 Profissional e confiável</p>
-<p>🔹 Focado em Pilates e bem-estar</p>
-<p>🔹 Pensando no futuro (expansão para outros cursos)</p>
-</section>
-
-<!-- Imagem do Produto -->
+<!-- Imagem do Produto antes do início da seção VOLL+ -->
 <section id="produto-imagem">
   <img src="produto.png" alt="Imagem do Produto VOLL+ Pilates">
 </section>
@@ -148,7 +146,7 @@ footer {
 <h2>VOLL+ Pilates - Sobre o Produto</h2>
 <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, além de novas atualizações mensais. Estude do seu jeito, começando pelo tema que mais lhe interessa, onde e como preferir. E o melhor de tudo: todos os cursos possuem certificado de conclusão.</p>
 <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
-<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadores que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
+<p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
 <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
 
 <h3>3 Benefícios Principais</h3>
