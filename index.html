@@ -11,47 +11,50 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
 
-/* FUNDO CLARO */
-body { background: linear-gradient(135deg,#f0f0f0,#e0e0e0); color:#000; overflow-x:hidden; line-height:1.6; }
+/* FUNDO CINZA CLARO PARA DESTACAR INFORMAÇÕES */
+body { 
+  background: #f2f2f2; 
+  color: #000; 
+  overflow-x:hidden; 
+  line-height:1.6; 
+  font-size: 16px;
+}
 
-/* TEXTO DESTACADO */
-h1,h2,h3,p,li,a { color:#000; text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000; }
+/* TEXTOS IMPORTANTES */
+h1,h2,h3,p,li,a { 
+  color: #000; 
+}
 
 /* HEADER */
 header {
   position: relative;
-  height: 380px;
-  background: linear-gradient(90deg,#f5f5f5,#ddd,#ccc);
-  display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20px;
+  min-height: 350px;
+  background: linear-gradient(90deg,#e6e6e6,#dcdcdc,#cfcfcf);
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center; 
+  align-items:center; 
+  text-align:center; 
+  padding:20px;
   overflow:hidden;
 }
-header h1 { font-size:3rem; }
-header p { font-size:1.1rem; max-width:850px; margin-top:10px; }
+header h1 { font-size:3rem; margin-bottom:15px; }
+header p { font-size:1.1rem; max-width:850px; }
 
 /* BALÕES */
 .balloon {
   position:absolute;
   background:#ff0000;
   border-radius:50%;
-  opacity:0.6;
+  opacity:0.5;
   animation: floatUp linear infinite;
 }
 @keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
 
-/* FUNDO ESTILO LÁPIS */
-body::after {
-  content:""; position:fixed; top:0; left:0; width:200%; height:200%;
-  background-image:url('https://www.transparenttextures.com/patterns/pencil-paper.png');
-  opacity:0.05; pointer-events:none; z-index:-1;
-  animation: bgMove 60s linear infinite;
-}
-@keyframes bgMove {0%{transform:translate(0,0);}100%{transform:translate(-50px,-50px);}}
-
 /* MAIN */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { margin-bottom:50px; padding:20px; border-radius:10px; background: rgba(255,0,0,0.05); opacity:0; transform: translateY(20px); transition: all 1s ease-out; }
-section.visible { opacity:1; transform: translateY(0); }
-h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; }
+section { margin-bottom:50px; padding:20px; border-radius:10px; background: rgba(255,0,0,0.05); }
+h2 { font-size:2rem; margin-bottom:15px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; }
 p, li { margin-bottom:10px; }
 
 /* LISTAS */
@@ -59,11 +62,11 @@ ul { list-style:none; margin-top:15px; }
 ul li { position:relative; padding-left:25px; }
 ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
-/* BOTÕES NEON */
+/* BOTÕES */
 .btn-neon {
   display:inline-block; margin:5px; padding:12px 20px; color:#000;
   text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center;
-  text-shadow:0 0 3px #ff0000; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
+  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
 }
 .btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
 
@@ -102,16 +105,6 @@ for(let i=0;i<totalBalloons;i++){
   b.style.animationDuration=(6+Math.random()*6)+'s';
   headerEl.appendChild(b);
 }
-
-const sections=document.querySelectorAll('section');
-function showSections(){ 
-  sections.forEach(s=>{
-    const rect=s.getBoundingClientRect();
-    if(rect.top<window.innerHeight*0.9){ s.classList.add('visible'); }
-  });
-}
-window.addEventListener('scroll',showSections);
-window.addEventListener('load',showSections);
 </script>
 
 <main>
