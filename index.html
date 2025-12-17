@@ -17,7 +17,7 @@ body {
   color:#ffffff; 
   line-height:1.6; 
   font-size:16px; 
-  text-shadow: 0 0 6px #ff4444; 
+  text-shadow: 0 0 6px #ff4444;
 }
 
 /* Cabeçalho */
@@ -43,6 +43,8 @@ header p {
   line-height: 1.6;
   text-shadow: 0 0 6px #ff8888;
 }
+
+/* Linhas decorativas do header */
 .header-lines {
   height: 4px;
   width: 120px;
@@ -75,7 +77,14 @@ section {
   border-radius:10px; 
   background:rgba(255,0,0,0.05); 
 }
-h2 { font-size:2rem; margin-bottom:15px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; text-shadow:0 0 6px #ff4444; }
+h2 { 
+  font-size:2rem; 
+  margin-bottom:15px; 
+  border-bottom:2px solid #ff0000; 
+  display:inline-block; 
+  padding-bottom:5px; 
+  text-shadow:0 0 6px #ff4444; 
+}
 ul { list-style:none; margin-top:15px; }
 ul li { position:relative; padding-left:25px; margin-bottom:10px; }
 ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
@@ -83,22 +92,50 @@ p, li { margin-bottom:10px; text-shadow:0 0 6px #ff4444; }
 
 /* Botões neon */
 .btn-neon {
-  display:inline-block; margin:5px; padding:12px 20px; 
+  display:inline-block; 
+  margin:5px; 
+  padding:12px 20px; 
   color:#ffffff; 
   text-shadow: 0 0 6px #ff4444; 
-  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
-  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
+  text-decoration:none; font-weight:bold; 
+  border:2px solid #ff0000; border-radius:5px;
+  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; 
+  transition:0.3s;
 }
-.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
+.btn-neon:hover { 
+  background:#ff0000; color:#fff; transform:scale(1.1); 
+  box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; 
+}
 
 /* Áudio */
 audio { width:100%; margin:10px 0; }
 
 /* Rodapé */
-footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; text-shadow:0 0 6px #ff4444; }
+footer { 
+  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); 
+  color:#fff; text-align:center; padding:25px 20px; 
+  font-weight:bold; text-shadow:0 0 6px #ff4444; 
+}
 
 /* Contato */
 .contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; text-shadow:0 0 6px #ff4444; }
+
+/* Seção VOLL+ lado a lado com espaçamento */
+#voll-produto {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:30px;
+}
+#voll-produto img {
+  flex: 0 0 300px;
+  border:4px solid #ff0000;
+  border-radius:12px;
+  box-shadow:0 0 18px #ff4444;
+}
+#voll-produto .texto-produto {
+  flex:1 1 500px;
+}
 
 /* Responsivo */
 @media(max-width:768px){ 
@@ -107,25 +144,7 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
   .btn-neon{padding:10px 15px; font-size:0.9rem;} 
   section{padding:15px;} 
   #voll-produto { flex-direction: column; align-items: center; }
-  #voll-produto img { margin-bottom:20px; max-width:300px; }
-}
-
-/* Seção VOLL+ lado a lado com espaçamento */
-#voll-produto {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:flex-start;
-  gap:30px; 
-}
-#voll-produto img {
-  flex:1 1 300px;
-  max-width:300px;
-  border:4px solid #ff0000;
-  border-radius:12px;
-  box-shadow:0 0 18px #ff4444;
-}
-#voll-produto .texto-produto {
-  flex:2 1 500px;
+  #voll-produto img { margin-bottom:20px; }
 }
 </style>
 </head>
@@ -140,25 +159,25 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
 
 <script>
 // Balões animados no header
-const headerEl = document.querySelector('header');
-const totalBalloons = 10;
+const header = document.querySelector('header');
+const totalBalloons = 15;
 for (let i = 0; i < totalBalloons; i++) {
   const balloon = document.createElement('div');
   balloon.className = 'balloon';
   balloon.style.left = Math.random() * 100 + 'vw';
-  balloon.style.width = 20 + Math.random() * 25 + 'px';
-  balloon.style.height = 25 + Math.random() * 25 + 'px';
+  balloon.style.width = 15 + Math.random() * 25 + 'px';
+  balloon.style.height = 20 + Math.random() * 25 + 'px';
   balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
-  headerEl.appendChild(balloon);
+  header.appendChild(balloon);
 
-  // Segunda camada de balões
+  // Segunda camada
   const balloon2 = document.createElement('div');
   balloon2.className = 'balloon layer2';
   balloon2.style.left = Math.random() * 100 + 'vw';
-  balloon2.style.width = 15 + Math.random() * 20 + 'px';
-  balloon2.style.height = 15 + Math.random() * 20 + 'px';
-  balloon2.style.animationDuration = 8 + Math.random() * 6 + 's';
-  headerEl.appendChild(balloon2);
+  balloon2.style.width = 10 + Math.random() * 20 + 'px';
+  balloon2.style.height = 10 + Math.random() * 20 + 'px';
+  balloon2.style.animationDuration = 5 + Math.random() * 5 + 's';
+  header.appendChild(balloon2);
 }
 </script>
 
@@ -171,7 +190,6 @@ for (let i = 0; i < totalBalloons; i++) {
 <p>🔹 Pensando no futuro (expansão para outros cursos)</p>
 </section>
 
-<!-- Seção VOLL+ com imagem ao lado -->
 <section id="voll-produto">
   <img src="produto.png.png" alt="Imagem do Produto VOLL+ Pilates">
   <div class="texto-produto">
@@ -181,18 +199,27 @@ for (let i = 0; i < totalBalloons; i++) {
     <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
     <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
 
-    <h3>Escolha sua assinatura da VOLL+</h3>
+    <h3>3 Benefícios Principais</h3>
     <ul>
-      <li>O MAIS VANTAJOSO</li>
-      <li>R$360 de desconto</li>
-      <li>Desconto em nossos parceiros: EquiPilates e Pratyque</li>
-      <li>Curso de sua escolha com certificado</li>
-      <li>Acesso à todos os cursos dentro da plataforma VOLL+</li>
-      <li>Conteúdos novos todos os meses</li>
-      <li>*Assinatura válida por um ano com renovação automática</li>
-      <li>R$ 149/mês - Plano anual sem comprometer o limite do cartão de crédito</li>
-      <li>R$ 126/mês - Plano anual parcelado no cartão de crédito em até 12x</li>
+      <li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
+      <li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
+      <li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
     </ul>
+
+    <h3>Para quem é esse curso?</h3>
+    <ul>
+      <li>Profissionais de Educação Física</li>
+      <li>Fisioterapeutas</li>
+      <li>Estudantes da área da saúde</li>
+      <li>Pessoas que querem trabalhar com Pilates</li>
+      <li>Quem busca qualidade de vida e conhecimento corporal</li>
+    </ul>
+
+    <h3>Escolha sua assinatura</h3>
+    <p style="color:#ffcc00; font-weight:bold;">R$149/mês - Plano Anual sem comprometer o limite do cartão</p>
+    <p style="color:#ffcc00; font-weight:bold;">R$126/mês - Plano Anual parcelado no cartão em até 12x</p>
+    <p style="color:#ffcc00; font-weight:bold;">Desconto de R$360 em nossos parceiros: EquiPilates e Pratyque</p>
+
   </div>
 </section>
 
@@ -218,6 +245,7 @@ for (let i = 0; i < totalBalloons; i++) {
 
 <section>
 <h2>Links Rápidos</h2>
+<p>Confira abaixo:</p>
 <a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
 <a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
 <a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" class="btn-neon">VOLL+</a>
@@ -234,8 +262,6 @@ for (let i = 0; i < totalBalloons; i++) {
 <p>[Gmail: jph4ttori@gmail.com]</p>
 </div>
 </section>
-
-</main>
 
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
