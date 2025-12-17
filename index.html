@@ -4,188 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portal Evolução | Cursos VOLL+ Pilates</title>
-<meta name="description" content="Cursos de Pilates e bem-estar testados e aprovados. Aprenda com quem é referência.">
+<title>Portal Evolução | VOLL+ Pilates</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-17808283080');
-</script>
-
 <style>
 :root {
-  --primary: #2e8b57;
-  --secondary: #1f6f4a;
-  --light: #f4fdf9;
-  --dark: #1c1c1c;
+  --neon: #00ffcc;
+  --dark: #0b0b0b;
+  --gray: #1e1e1e;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* RESET */
+* { box-sizing: border-box; }
 
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #ffffff;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #000, #2b2b2b);
+  color: #eaeaea;
 }
 
-/* HEADER */
+/* HEADER COM NEON */
 header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
+  padding: 90px 20px;
   text-align: center;
-  padding: 80px 20px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #0f3d2e,
+      #0f3d2e 10px,
+      #0b2f23 10px,
+      #0b2f23 20px
+    );
 }
 
 header h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-  animation: fadeDown 1s ease;
+  font-size: 48px;
+  color: var(--neon);
+  text-shadow:
+    0 0 5px var(--neon),
+    0 0 15px var(--neon),
+    0 0 30px var(--neon);
+  padding: 20px 40px;
+  border: 3px solid var(--neon);
+  border-radius: 60px;
+  display: inline-block;
+  animation: pulse 2s infinite;
 }
 
 header p {
+  margin-top: 20px;
   font-size: 20px;
   opacity: 0.9;
-  animation: fadeUp 1.2s ease;
 }
 
 /* SECTIONS */
 section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 h2 {
-  color: var(--primary);
-  font-size: 32px;
-  margin-bottom: 20px;
+  color: var(--neon);
+  font-size: 34px;
 }
 
-h3 {
-  color: var(--secondary);
-}
-
-/* LIST */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-  font-size: 16px;
+/* IMAGENS */
+.image-banner {
+  width: 100%;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: 60px 0;
+  box-shadow: 0 0 40px rgba(0,255,204,0.25);
 }
 
 /* BENEFITS */
 .benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 30px;
 }
 
 .benefits div {
-  background: var(--light);
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--neon);
   padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,255,204,0.25);
 }
 
-.benefits div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
-}
-
-/* CTA BUTTONS */
-.quick-links, .cta {
-  text-align: center;
-}
-
-.quick-links a {
+/* BOTÕES NEON */
+a.button {
   display: inline-block;
-  margin: 12px;
-  padding: 16px 32px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
+  margin: 15px;
+  padding: 18px 38px;
+  color: var(--neon);
   text-decoration: none;
   font-weight: 600;
   border-radius: 50px;
-  box-shadow: 0 10px 25px rgba(46,139,87,0.35);
+  border: 2px solid var(--neon);
+  box-shadow: 0 0 15px rgba(0,255,204,0.6);
   transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-.quick-links a::after {
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 100%;
-  top: 0;
-  left: -120%;
-  background: rgba(255,255,255,0.2);
-  transform: skewX(-20deg);
+a.button:hover {
+  background: var(--neon);
+  color: #000;
+  box-shadow: 0 0 40px rgba(0,255,204,0.9);
+  transform: scale(1.1);
 }
 
-.quick-links a:hover::after {
-  left: 120%;
-  transition: 0.7s;
+/* MUSIC PLAYER */
+.music {
+  text-align: center;
 }
 
-.quick-links a:hover {
-  transform: scale(1.08);
-}
-
-/* CONTACT */
-.contact a {
-  color: var(--primary);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
+iframe {
+  border-radius: 16px;
+  margin-top: 20px;
 }
 
 /* FOOTER */
 footer {
-  background: #f3f3f3;
-  padding: 25px;
+  background: #000;
+  padding: 30px;
   text-align: center;
   font-size: 14px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* SCROLL EFFECT */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+/* ANIMAÇÃO */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px var(--neon); }
+  50% { box-shadow: 0 0 30px var(--neon); }
+  100% { box-shadow: 0 0 10px var(--neon); }
 }
 </style>
 </head>
@@ -194,65 +149,57 @@ footer {
 
 <header>
 <h1>Portal Evolução</h1>
-<p>Conhecimento que move sua vida</p>
+<p>Conhecimento, saúde e bem-estar em movimento</p>
 </header>
 
-<section class="reveal">
-<h2>Bem-vindo!</h2>
-<p>Descubra cursos testados e aprovados para elevar sua carreira e qualidade de vida.</p>
-<p><strong>Links afiliados:</strong> você será direcionado ao site oficial do produtor.</p>
+<section>
+<h2>Bem-vindo</h2>
+<p>Cursos testados, aprovados e recomendados para transformar sua vida e carreira.</p>
 </section>
 
-<section class="reveal">
+<div class="image-banner" style="background-image:url('https://images.unsplash.com/photo-1554284126-aa88f22d8b72');"></div>
+
+<section>
 <h2>VOLL+ Pilates</h2>
-<p>Uma única assinatura com acesso aos melhores cursos certificados de Pilates do Grupo VOLL.</p>
 
 <div class="benefits">
   <div>
-    <h3>🎓 Do zero ao avançado</h3>
-    <p>Conteúdo completo para iniciantes e profissionais.</p>
+    <h3>🏃 Saúde em movimento</h3>
+    <p>Conteúdos práticos focados no corpo e na performance.</p>
   </div>
   <div>
-    <h3>🧠 Didática prática</h3>
-    <p>Aulas reais com aplicação imediata.</p>
+    <h3>🧘‍♀️ Bem-estar completo</h3>
+    <p>Treinos, pilates e consciência corporal.</p>
   </div>
   <div>
-    <h3>📜 Certificação reconhecida</h3>
-    <p>Agregue valor ao seu currículo.</p>
+    <h3>📜 Certificação</h3>
+    <p>Reconhecimento profissional com qualidade.</p>
   </div>
 </div>
 </section>
 
-<section class="quick-links reveal">
+<div class="image-banner" style="background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65');"></div>
+
+<section style="text-align:center;">
 <h2>Acesso rápido</h2>
-<a href="https://go.hotmart.com/P103425796F" target="_blank">Página de Vendas</a>
-<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank">Checkout</a>
-<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank">VOLL+</a>
-<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank">2ª Semana Pilates</a>
+<a class="button" href="https://go.hotmart.com/P103425796F" target="_blank">Página de Vendas</a>
+<a class="button" href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank">Checkout</a>
+<a class="button" href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank">VOLL+</a>
 </section>
 
-<section class="contact reveal">
-<h2>Contato Oficial</h2>
-<p>📩 suporte@grupovoll.com.br</p>
-<p>📷 Instagram: @vollpilatesgroup</p>
+<section class="music">
+<h2>🎧 Canal Relaxante</h2>
+<p>Ambiente sonoro para foco e bem-estar</p>
+
+<iframe style="border-radius:12px" 
+src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" 
+width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
 </section>
 
 <footer>
 © 2026 Portal Evolução · Todos os direitos reservados
 </footer>
-
-<script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add('active');
-    }
-  });
-});
-</script>
 
 </body>
 </html>
