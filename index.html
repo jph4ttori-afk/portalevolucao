@@ -4,110 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
-<meta name="description" content="Conhecimento que move sua vida. Cursos de Pilates, relaxamento e bem-estar com links diretos para aprender e crescer profissionalmente.">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+body { background:#f2f2f2; color:#000; line-height:1.6; font-size:16px; }
 
-/* FUNDO CINZA CLARO PARA DESTACAR INFORMAÇÕES */
-body { 
-  background: #f2f2f2; 
-  color: #000; 
-  overflow-x:hidden; 
-  line-height:1.6; 
-  font-size: 16px;
-}
-
-/* TEXTOS IMPORTANTES */
-h1,h2,h3,p,li,a { 
-  color: #000; 
-}
-
-/* HEADER */
 header {
-  position: relative;
-  min-height: 350px;
+  position:relative;
+  padding:50px 20px;
   background: linear-gradient(90deg,#e6e6e6,#dcdcdc,#cfcfcf);
-  display:flex; 
-  flex-direction:column; 
-  justify-content:center; 
-  align-items:center; 
-  text-align:center; 
-  padding:20px;
-  overflow:hidden;
+  text-align:center;
 }
 header h1 { font-size:3rem; margin-bottom:15px; }
-header p { font-size:1.1rem; max-width:850px; }
+header p { max-width:800px; margin:auto; }
 
-/* BALÕES */
 .balloon {
-  position:absolute;
-  background:#ff0000;
-  border-radius:50%;
-  opacity:0.5;
+  position:absolute; background:#ff0000; border-radius:50%; opacity:0.5;
   animation: floatUp linear infinite;
 }
 @keyframes floatUp {0%{transform:translateY(100vh);}100%{transform:translateY(-50px);}}
 
-/* MAIN */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { margin-bottom:50px; padding:20px; border-radius:10px; background: rgba(255,0,0,0.05); }
+section { margin-bottom:40px; padding:20px; border-radius:10px; background:rgba(255,0,0,0.05); }
 h2 { font-size:2rem; margin-bottom:15px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; }
+ul { list-style:none; margin-top:15px; }
+ul li { position:relative; padding-left:25px; margin-bottom:10px; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 p, li { margin-bottom:10px; }
 
-/* LISTAS */
-ul { list-style:none; margin-top:15px; }
-ul li { position:relative; padding-left:25px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
-
-/* BOTÕES */
 .btn-neon {
   display:inline-block; margin:5px; padding:12px 20px; color:#000;
-  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px; text-align:center;
-  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
+  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
+  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
 }
 .btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.1); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
 
-/* AUDIO */
-audio { width:100%; margin:10px 0; outline:none; }
+audio { width:100%; margin:10px 0; }
 
-/* FOOTER */
 footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; }
 
-/* CONTATO */
 .contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
 
-/* RESPONSIVO */
-@media(max-width:768px){
-  header h1{ font-size:2.2rem;}
-  header p{ font-size:1rem;}
-  .btn-neon{padding:10px 15px; font-size:0.9rem;}
-  section{padding:15px;}
-}
+@media(max-width:768px){ header h1{ font-size:2.2rem;} header p{ font-size:1rem;} .btn-neon{padding:10px 15px; font-size:0.9rem;} section{padding:15px;} }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Portal Evolução</h1>
-  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
+<h1>Portal Evolução</h1>
+<p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados. Isso ajuda MUITO na expansão do conhecimento ao público.</p>
 </header>
 
-<script>
-const headerEl=document.querySelector('header');
-const totalBalloons=window.innerWidth<768?10:20;
-for(let i=0;i<totalBalloons;i++){
-  const b=document.createElement('div'); b.className='balloon';
-  const size=15+Math.random()*20; b.style.width=size+'px'; b.style.height=(size*1.5)+'px';
-  b.style.left=Math.random()*100+'vw';
-  b.style.animationDuration=(6+Math.random()*6)+'s';
-  headerEl.appendChild(b);
-}
-</script>
-
 <main>
+
 <section>
 <h2>Portal Evolução</h2>
 <p>🔹 Profissional e confiável</p>
@@ -187,5 +135,6 @@ for(let i=0;i<totalBalloons;i++){
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
+
 </body>
 </html>
