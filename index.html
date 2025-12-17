@@ -1,195 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Evolução | Pilates & Bem-Estar</title>
-  <meta name="description" content="Cursos de Pilates, relaxamento e bem-estar. Aprenda com dicas práticas e músicas relaxantes no Portal Evolução.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
+<meta name="description" content="Portal Evolução: Cursos de Pilates, relaxamento e bem-estar. Descubra cursos certificados, dicas práticas e músicas relaxantes.">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; scroll-behavior: smooth; }
+body { background: linear-gradient(135deg,#000,#222); color:#fff; overflow-x:hidden; line-height:1.6; }
 
-    body {
-      background: linear-gradient(135deg, #000000, #222222);
-      color: #fff;
-      overflow-x: hidden;
-    }
+header {
+  position: relative;
+  height: 350px;
+  background: linear-gradient(90deg,#0f0c29,#302b63,#24243e);
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; overflow:hidden; padding:20px;
+}
+header h1 { font-size:3rem; color:#ff0000; text-shadow:0 0 20px #ff0000; animation:fadeIn 1.5s ease-in-out; }
+header p { font-size:1.2rem; max-width:800px; text-shadow:0 0 5px #ff0000; margin-top:10px; animation:fadeIn 2s ease-in-out; }
 
-    header {
-      position: relative;
-      height: 300px;
-      background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
+@keyframes fadeIn { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
 
-    header h1 {
-      font-size: 3rem;
-      color: #ff0000;
-      text-shadow: 0 0 10px #ff0000;
-      margin-bottom: 10px;
-    }
+.balloon {
+  position:absolute; background:#ff0000; border-radius:50%; opacity:0.6;
+  animation: floatUp linear infinite;
+  pointer-events:none;
+}
+@keyframes floatUp { from{transform:translateY(120vh);} to{transform:translateY(-120px);} }
 
-    header p {
-      font-size: 1.2rem;
-      text-shadow: 0 0 5px #ff0000;
-    }
+body::after {
+  content:""; position:fixed; top:0; left:0; width:100%; height:100%;
+  background-image: url('https://www.transparenttextures.com/patterns/pencil-paper.png');
+  opacity:0.1; pointer-events:none; z-index:-1;
+}
 
-    .balloon {
-      position: absolute;
-      background: #ff0000;
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: floatUp linear infinite;
-    }
+main { padding:50px 20px; max-width:1200px; margin:auto; }
 
-    @keyframes floatUp {
-      from { transform: translateY(120vh); }
-      to { transform: translateY(-120px); }
-    }
+section { margin-bottom:60px; opacity:0; transform: translateY(50px); transition: all 1s ease-out; }
+section.visible { opacity:1; transform: translateY(0); }
 
-    @media (prefers-reduced-motion: reduce) {
-      .balloon {
-        animation: none;
-      }
-    }
+h2 { font-size:2rem; color:#ff0000; margin-bottom:20px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; }
 
-    main {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+ul { list-style:none; margin-top:20px; }
+ul li { margin-bottom:15px; padding-left:25px; position:relative; transition: transform 0.3s, color 0.3s; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
+ul li:hover { transform: scale(1.05); color:#ff4444; }
 
-    section {
-      margin-bottom: 60px;
-    }
+.btn-neon {
+  display:inline-block; margin:10px; padding:15px 25px; color:#ff0000;
+  text-decoration:none; font-weight:bold; border:2px solid #ff0000;
+  border-radius:5px; text-align:center;
+  box-shadow:0 0 15px #ff0000, 0 0 30px #ff0000;
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+.btn-neon:hover { background:#ff0000; color:#000; transform:scale(1.12); box-shadow:0 0 30px #ff0000,0 0 60px #ff0000; }
+@keyframes neonPulse { from {box-shadow:0 0 10px #ff0000,0 0 20px #ff0000;} to {box-shadow:0 0 25px #ff4444,0 0 50px #ff4444;} }
 
-    h2 {
-      font-size: 2rem;
-      color: #ff0000;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ff0000;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+audio { width:100%; margin:10px 0; outline:none; }
 
-    ul {
-      list-style: none;
-    }
+footer {
+  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000);
+  color:#000; text-align:center; padding:30px 20px; font-weight:bold;
+  position:relative; overflow:hidden;
+}
+footer::before, footer::after {
+  content:''; position:absolute; width:100%; height:5px;
+  background:linear-gradient(90deg,#fff,#ff0000,#fff); animation: shine 2s linear infinite;
+}
+footer::before{top:0;} footer::after{bottom:0;}
+@keyframes shine{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
 
-    ul li {
-      margin-bottom: 15px;
-      padding-left: 22px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: #ff0000;
-    }
-
-    .btn-neon {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 25px;
-      color: #ff0000;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #ff0000;
-      border-radius: 5px;
-      transition: 0.3s;
-      box-shadow: 0 0 10px #ff0000;
-    }
-
-    .btn-neon:hover {
-      background: #ff0000;
-      color: #000;
-      transform: scale(1.08);
-    }
-
-    audio {
-      width: 100%;
-      margin: 10px 0;
-    }
-
-    footer {
-      background: linear-gradient(90deg, #ff0000, #ff5555, #ff0000);
-      color: #000;
-      text-align: center;
-      padding: 30px 20px;
-      font-weight: bold;
-    }
-  </style>
+.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; }
+</style>
 </head>
 <body>
 
 <header>
   <h1>Portal Evolução</h1>
-  <p>Cursos de Pilates & Bem-Estar</p>
+  <p>Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados, com recomendações honestas + links diretos para você comprar e aprender! Este site pode conter links afiliados.</p>
 </header>
 
 <script>
-  const header = document.querySelector('header');
-  const isMobile = window.innerWidth < 768;
-  const totalBalloons = isMobile ? 15 : 25;
+const headerEl = document.querySelector('header');
+const totalBalloons = window.innerWidth<768?15:30;
+for(let i=0;i<totalBalloons;i++){
+  const b=document.createElement('div'); b.className='balloon';
+  b.style.left=Math.random()*100+'vw';
+  b.style.width=20+Math.random()*25+'px';
+  b.style.height=30+Math.random()*35+'px';
+  b.style.animationDuration=6+Math.random()*6+'s';
+  b.style.zIndex=Math.random()*100;
+  headerEl.appendChild(b);
+}
 
-  for (let i = 0; i < totalBalloons; i++) {
-    const balloon = document.createElement('div');
-    balloon.className = 'balloon';
-    balloon.style.left = Math.random() * 100 + 'vw';
-    balloon.style.width = 20 + Math.random() * 20 + 'px';
-    balloon.style.height = 30 + Math.random() * 30 + 'px';
-    balloon.style.animationDuration = 6 + Math.random() * 6 + 's';
-    header.appendChild(balloon);
-  }
+// Scroll animations
+const sections=document.querySelectorAll('section');
+function showSections(){ sections.forEach(s=>{const rect=s.getBoundingClientRect(); if(rect.top<window.innerHeight*0.8){s.classList.add('visible');}});}
+window.addEventListener('scroll',showSections);
+window.addEventListener('load',showSections);
 </script>
 
 <main>
+  <section>
+    <h2>Portal Evolução</h2>
+    <ul>
+      <li>Profissional e confiável</li>
+      <li>Focado em Pilates e bem-estar</li>
+      <li>Pensando no futuro (expansão para outros cursos)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>VOLL+ Pilates - Sobre o Produto</h2>
+    <p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL, com atualizações mensais. Todos os cursos possuem certificado de conclusão.</p>
+    <p>A VOLL significa “Completo” em alemão, líder global em produtos e serviços de Pilates. Nossa missão é promover crescimento para estudantes e profissionais de Pilates, Fisioterapia e Educação Física.</p>
+    <h3>3 Benefícios Principais</h3>
+    <ul>
+      <li>Aprenda do zero ao avançado</li>
+      <li>Aulas práticas e didáticas</li>
+      <li>Certificação reconhecida</li>
+    </ul>
+    <h3>Para quem é esse curso?</h3>
+    <ul>
+      <li>Profissionais de Educação Física</li>
+      <li>Fisioterapeutas</li>
+      <li>Estudantes da área da saúde</li>
+      <li>Pessoas que querem trabalhar com Pilates</li>
+      <li>Quem busca qualidade de vida e conhecimento corporal</li>
+    </ul>
+  </section>
 
   <section id="cursos">
     <h2>5 Dicas Essenciais de Pilates</h2>
     <ul>
-      <li>Mantenha postura correta para evitar lesões.</li>
-      <li>Respire profundamente em cada movimento.</li>
-      <li>Priorize a qualidade, não a quantidade.</li>
-      <li>Use acessórios para potencializar os exercícios.</li>
-      <li>Seja consistente e paciente com seu progresso.</li>
+      <li>Mantenha postura correta para evitar lesões</li>
+      <li>Respire profundamente em cada movimento</li>
+      <li>Priorize qualidade, não quantidade</li>
+      <li>Use acessórios para potencializar exercícios</li>
+      <li>Seja consistente e paciente</li>
     </ul>
   </section>
 
   <section id="relaxamento">
     <h2>Músicas de Relaxamento</h2>
-
-    <audio controls aria-label="Música relaxante 1">
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-    </audio>
-
-    <audio controls aria-label="Música relaxante 2">
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
-    </audio>
-
-    <audio controls aria-label="Música relaxante 3">
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
-    </audio>
-  </section>
-
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>O Portal Evolução promove bem-estar, saúde e qualidade de vida por meio do Pilates, relaxamento e autocuidado.</p>
+    <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+    <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+    <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+    <audio controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
   </section>
 
   <section id="contato">
@@ -200,11 +162,19 @@
     <a href="#contato" class="btn-neon">Contato</a>
   </section>
 
+  <section>
+    <h2>Contato & Segurança</h2>
+    <div class="contact-info">
+      <p>📩 Email: <a href="mailto:suporte@grupovoll.com.br">suporte@grupovoll.com.br</a></p>
+      <p>📷 Instagram: <a href="https://www.instagram.com/vollpilatesgroup" target="_blank">@vollpilatesgroup</a></p>
+      <p>📞 Cel: [11] 99369-7721</p>
+      <p>⚠️ Não aceitamos depósitos em nome de terceiros ou pessoas físicas. Confirme sempre antes de pagar.</p>
+    </div>
+  </section>
 </main>
 
 <footer>
-  © 2025 Portal Evolução — Todos os direitos reservados
+  &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
-
 </body>
 </html>
