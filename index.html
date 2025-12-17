@@ -9,8 +9,8 @@
 
 /* Corpo do site */
 body { 
-  background:#1e1e1e;
-  color:#fff;
+  background:#1e1e1e; /* grafite escuro */
+  color:#fff; /* texto branco brilhante */
   line-height:1.6; 
   font-size:16px; 
 }
@@ -113,18 +113,20 @@ footer {
   section{padding:15px;} 
   #voll-produto { flex-direction: column; align-items: center; }
   #voll-produto img { margin-bottom:20px; }
+  #voll-precos { flex-direction: column; align-items: center; }
+  #voll-precos img { margin-bottom:20px; }
 }
 
-/* Seção VOLL+ lado a lado com espaçamento */
+/* Seção VOLL+ lado a lado */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
   align-items:flex-start;
-  gap:30px; /* espaçamento maior entre imagem e texto */
+  gap:30px;
 }
 #voll-produto img {
-  flex:1 1 300px; /* imagem reduzida */
-  max-width:300px;
+  flex:1 1 380px;
+  max-width:380px;
   border:4px solid #ff0000;
   border-radius:12px;
   box-shadow:0 0 18px #ff4444;
@@ -132,6 +134,28 @@ footer {
 #voll-produto .texto-produto {
   flex:2 1 500px;
 }
+
+/* Seção Preços lado a lado */
+#voll-precos {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:30px;
+  margin-top:20px;
+}
+#voll-precos img {
+  flex:1 1 380px;
+  max-width:380px;
+  border:4px solid #ff8800;
+  border-radius:12px;
+  box-shadow:0 0 18px #ffbb44;
+}
+#voll-precos .texto-precos {
+  flex:2 1 500px;
+}
+.texto-precos h2 { color: #ffdddd; text-shadow: 0 0 6px #ff8888; }
+.preco-item h3 { color: #fff2aa; text-shadow: 0 0 6px #ffcc66; margin-top:15px; }
+.preco-item p { color: #ffeebb; text-shadow: 0 0 4px #ffaaaa; font-weight:bold; }
 </style>
 </head>
 <body>
@@ -152,22 +176,34 @@ footer {
     <p>A VOLL, que significa “Completo” em alemão, é líder global em produtos e serviços de Pilates no mundo!</p>
     <p>Nossa missão é fazer parte do crescimento de estudantes e profissionais de Pilates, Fisioterapia e Educação Física, através do ensino de excelência e de soluções inovadoras que possibilitam conquistas para todos que nos cercam: clientes, parceiros e colaboradores.</p>
     <p>Tudo do movimento você encontra aqui no Grupo VOLL!</p>
+  </div>
+</section>
 
-    <h3>3 Benefícios Principais</h3>
-    <ul>
-      <li>Aprenda do zero ao avançado – Ideal tanto para iniciantes quanto para profissionais</li>
-      <li>Aulas práticas e didáticas – Conteúdo claro com demonstrações reais</li>
-      <li>Certificação reconhecida – Receba certificado ao concluir o curso</li>
-    </ul>
+<!-- Seção Preços -->
+<section id="voll-precos">
+  <img src="produto.png" alt="Imagem do Produto VOLL+">
+  <div class="texto-precos">
+    <h2>Escolha Sua Assinatura da VOLL+</h2>
 
-    <h3>Para quem é esse curso?</h3>
-    <ul>
-      <li>Profissionais de Educação Física</li>
-      <li>Fisioterapeutas</li>
-      <li>Estudantes da área da saúde</li>
-      <li>Pessoas que querem trabalhar com Pilates</li>
-      <li>Quem busca qualidade de vida e conhecimento corporal</li>
-    </ul>
+    <div class="preco-item">
+      <h3>O MAIS VANTAJOSO</h3>
+      <p>R$360 de desconto</p>
+      <p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
+      <p>Curso de sua escolha com certificado</p>
+      <p>Acesso à todos os cursos dentro da plataforma VOLL+</p>
+      <p>Conteúdos novos todos os meses</p>
+      <p>*Assinatura válida por um ano com renovação automática</p>
+    </div>
+
+    <div class="preco-item">
+      <h3>Plano Anual Sem Comprometer o Limite do Cartão de Crédito</h3>
+      <p>R$149/mês</p>
+    </div>
+
+    <div class="preco-item">
+      <h3>Plano Anual Parcelado no Cartão de Crédito em até 12x</h3>
+      <p>R$126/mês</p>
+    </div>
   </div>
 </section>
 
