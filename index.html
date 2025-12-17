@@ -1,212 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Evolução | VOLL+ Pilates</title>
+  <meta charset="UTF-8">
+  <title>Portal Evolução | Saúde em Movimento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos testados e aprovados para transformar sua saúde, carreira e qualidade de vida em 2026.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- ========= GOOGLE ADS TAG (ATIVA) ========= -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17808283080');
+  </script>
 
-<style>
-:root{
-  --neon:#00ffcc;
-}
+  <!-- ========= EVENTO DE CONVERSÃO ========= -->
+  <script>
+    function registrarConversao() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17808283080/CONVERSAO_PADRAO'
+      });
+    }
+  </script>
 
-body{
-  margin:0;
-  font-family:Poppins,sans-serif;
-  background:linear-gradient(180deg,#000,#2a2a2a);
-  color:#eaeaea;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(180deg, #000000, #2b2b2b);
+      color: #f0f0f0;
+    }
 
-/* HEADER */
-header{
-  padding:90px 20px;
-  text-align:center;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #0f3d2e,
-      #0f3d2e 10px,
-      #0b2f23 10px,
-      #0b2f23 20px
-    );
-}
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #000, #1a1a1a, #2f2f2f);
+      border-bottom: 3px solid #00ffcc;
+      box-shadow: 0 0 30px #00ffcc;
+    }
 
-/* LOGO */
-.logo{
-  display:inline-block;
-  padding:30px 60px;
-  border-radius:70px;
-  border:3px solid var(--neon);
-  background-image:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  box-shadow:0 0 40px var(--neon);
-}
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      padding: 22px 45px;
+      border-radius: 70px;
+      background: radial-gradient(circle at top, #6b4f2a, #3e2a14);
+      box-shadow: 0 0 35px #00ffcc;
+      display: inline-block;
+    }
 
-.logo h1{
-  margin:0;
-  font-size:48px;
-  background-image:url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:0 0 12px var(--neon);
-}
-
-/* SUBTITLE */
-.subtitle{
-  margin-top:30px;
-  display:inline-block;
-  padding:18px 40px;
-  background:#fff;
-  color:#000;
-  border-radius:40px;
-  border:2px solid var(--neon);
-  box-shadow:0 0 25px var(--neon);
-  font-size:20px;
-}
-
-/* WINDOW SECTION */
-.window-section{
-  background-image:url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  padding:110px 20px;
-}
-
-.window{
-  max-width:900px;
-  margin:auto;
-  background:rgba(255,255,255,0.18);
-  backdrop-filter:blur(6px);
-  border-radius:30px;
-  padding:50px;
-  border:3px solid var(--neon);
-  box-shadow:0 0 40px rgba(0,255,204,0.6);
-}
-
-.window h2{
-  font-size:36px;
-  color:var(--neon);
-}
-
-/* IMPACT */
-.impact{
-  margin:120px auto;
-  max-width:900px;
-  background:#000;
-  border-radius:25px;
-  border:3px solid var(--neon);
-  padding:50px;
-  box-shadow:0 0 40px var(--neon);
-  text-align:center;
-}
-
-.impact p{
-  font-size:20px;
-  line-height:1.7;
-}
-
-/* BUTTONS */
-.buttons{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  max-width:1100px;
-  margin:120px auto;
-}
-
-.buttons a{
-  text-decoration:none;
-  padding:30px;
-  border-radius:25px;
-  border:2px solid var(--neon);
-  color:var(--neon);
-  box-shadow:0 0 20px var(--neon);
-  transition:.4s;
-}
-
-.buttons a:hover{
-  background:var(--neon);
-  color:#000;
-  transform:scale(1.08);
-}
-
-/* IMAGES */
-.images{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
-  max-width:1200px;
-  margin:120px auto;
-}
-
-.images img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  border-radius:25px;
-  box-shadow:0 0 30px rgba(0,255,204,0.4);
-}
-
-/* FOOTER */
-footer{
-  background:#000;
-  padding:30px;
-  text-align:center;
-  font-size:14px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">
-    <h1>Portal Evolução</h1>
-  </div>
-  <div class="subtitle">
-    Conhecimento, Saúde e bem-estar em movimento!
-  </div>
-</header>
-
-<section class="window-section">
-  <div class="window">
-    <h2>Bem-vindo</h2>
-    <p>
-      Cursos testados, aprovados e recomendados para transformar sua vida e carreira,
-      <strong>em 2026!</strong>
-    </p>
-  </div>
-</section>
-
-<div class="impact">
-  <p>
-    Praticar atividade física regularmente melhora o humor, reduz dores, aumenta a
-    longevidade, melhora o desempenho profissional e previne doenças.
-    Conhecimento corporal não é gasto — é investimento.
-  </p>
-</div>
-
-<section class="buttons">
-  <a href="#">Pilates</a>
-  <a href="#">🏃 Saúde em movimento<br>Conteúdos práticos focados no corpo e na performance</a>
-  <a href="#">🧘‍♀️ Bem-estar completo<br>Treinos, pilates e consciência corporal</a>
-  <a href="#">📜 Certificação<br>Reconhecimento profissional com qualidade</a>
-</section>
-
-<section class="images">
-  <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b72?auto=format&fit=crop&w=1200&q=80" alt="Pessoa se exercitando">
-  <img src="https://images.unsplash.com/photo-1571019613914-85f342c1d1a2?auto=format&fit=crop&w=1200&q=80" alt="Pessoa correndo">
-  <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07b?auto=format&fit=crop&w=1200&q=80" alt="Atividade física ao ar livre">
-</section>
-
-<footer>
-© 2026 Portal Evolução · Todos os direitos reservados
-</footer>
-
-</body>
-</html>
+    header h1 span {
+      background: linear-gradient(90deg, #2ecc71, #27ae60, #2ecc71);
+      
