@@ -4,116 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
-
 <style>
+/* Reset e fonte */
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
 
 /* Corpo do site */
-body { 
-  background:#2c2c2c; 
-  color:#ffffff; 
-  line-height:1.6; 
-  font-size:16px; 
-  text-shadow: 0 0 6px #ff4444;
+body {
+  background:#2c2c2c;
+  color:#fff;
+  line-height:1.6;
+  font-size:16px;
+  text-shadow:0 0 6px #ff4444;
 }
 
-/* Cabeçalho */
+/* Cabeçalho dinâmico */
 header {
   position: relative;
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #ff0000, #a60000);
+  background: linear-gradient(135deg,#ff0000,#a60000);
   overflow: hidden;
   border-bottom: 4px solid #ff4444;
-  box-shadow: 0 0 20px #ff0000;
+  box-shadow:0 0 20px #ff0000;
 }
 header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
+  font-family:'Montserrat', sans-serif;
+  font-size:3.2rem;
+  margin-bottom:20px;
+  text-shadow:0 0 15px #ff0000,0 0 25px #ff5555;
 }
 header p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.1rem; 
-  line-height: 1.4;
-  text-shadow: 0 0 6px #ff8888;
+  max-width:900px;
+  margin:auto;
+  font-size:1.2rem;
+  line-height:1.5;
+  text-shadow:0 0 6px #ff8888;
 }
 .header-lines {
-  height: 4px;
-  width: 120px;
-  background: #ff4444;
-  margin: 15px auto;
-  border-radius: 2px;
-  box-shadow: 0 0 10px #ff8888;
+  height:4px;
+  width:120px;
+  background:#ff4444;
+  margin:15px auto;
+  border-radius:2px;
+  box-shadow:0 0 10px #ff8888;
 }
 
-/* Balões animados */
+/* Balões animados (duas camadas) */
 header .balloon {
-  border-radius: 50%;
-  position: absolute;
+  position:absolute;
+  border-radius:50%;
+  opacity:0.6;
   animation: floatUp linear infinite;
 }
-header .balloon.layer1 {
-  background: rgba(255,80,80,0.6);
-  opacity:0.6;
-}
-header .balloon.layer2 {
-  background: rgba(255,200,200,0.2);
-  opacity:0.35;
-  animation-duration: calc(6s + var(--i) * 1s);
-}
+header .balloon.layer1 { background:rgba(255,80,80,0.5); width:20px; height:25px; }
+header .balloon.layer2 { background:rgba(255,120,120,0.35); width:15px; height:20px; }
+@keyframes floatUp {0%{transform:translateY(100%);}100%{transform:translateY(-50px);}}
 
-@keyframes floatUp {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-50px); }
-}
-
-/* Seções do site */
+/* Conteúdo principal */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { 
-  margin-bottom:40px; 
-  padding:25px; 
-  border-radius:10px; 
-  background:rgba(255,0,0,0.05); 
+section {
+  margin-bottom:40px;
+  padding:20px;
+  border-radius:10px;
+  background:rgba(255,0,0,0.05);
 }
-h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #ff0000; display:inline-block; padding-bottom:5px; text-shadow:0 0 6px #ff4444; }
+h2 {
+  font-size:2rem;
+  margin-bottom:15px;
+  border-bottom:2px solid #ff0000;
+  display:inline-block;
+  padding-bottom:5px;
+  text-shadow:0 0 6px #ff4444;
+}
 ul { list-style:none; margin-top:15px; }
-ul li { position:relative; padding-left:30px; margin-bottom:12px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; font-weight:bold; }
-p, li { margin-bottom:12px; text-shadow:0 0 6px #ff4444; line-height:1.5; }
+ul li { position:relative; padding-left:25px; margin-bottom:10px; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
+p, li { margin-bottom:10px; text-shadow:0 0 4px #ff4444; }
 
-/* Botões neon */
-.btn-neon {
-  display:inline-block; margin:10px 5px; padding:12px 20px; 
-  color:#ffffff;
-  text-shadow: 0 0 6px #ff4444;
-  text-decoration:none; font-weight:bold; border:2px solid #ff0000; border-radius:5px;
-  text-align:center; box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; transition:0.3s;
-}
-.btn-neon:hover { background:#ff0000; color:#fff; transform:scale(1.05); box-shadow:0 0 30px #ff0000,0 0 50px #ff4444; }
-
-/* Áudio */
-audio { width:100%; margin:10px 0; }
-
-/* Rodapé */
-footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff; text-align:center; padding:25px 20px; font-weight:bold; text-shadow:0 0 6px #ff4444; }
-
-/* Contato */
-.contact-info { background: rgba(255,0,0,0.1); padding:15px; border-radius:10px; margin-top:15px; text-shadow:0 0 6px #ff4444; }
-
-/* Responsivo */
-@media(max-width:768px){ 
-  header h1{ font-size:2.2rem;} 
-  header p{ font-size:1rem;} 
-  .btn-neon{padding:10px 15px; font-size:0.9rem;} 
-  section{padding:15px;} 
-  #voll-produto { flex-direction: column; align-items: center; }
-  #voll-produto img { margin-bottom:20px; width:300px; } /* ajuste responsivo */
-}
-
-/* Seção VOLL+ lado a lado com espaçamento */
+/* Seção VOLL+ com imagem ao lado */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
@@ -121,24 +89,68 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
   gap:30px;
 }
 #voll-produto img {
-  flex:1 1 300px;
-  width:300px; /* Tamanho fixo conforme solicitado */
+  width:300px;
+  flex-shrink:0;
   border:4px solid #ff0000;
   border-radius:12px;
   box-shadow:0 0 18px #ff4444;
 }
 #voll-produto .texto-produto {
-  flex:2 1 500px;
+  flex:1 1 500px;
 }
-#precos {
-  background: rgba(255,0,0,0.08);
-  padding:20px;
+
+/* Botões neon com hover animado */
+.btn-neon {
+  display:inline-block;
+  margin:5px;
+  padding:12px 20px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  border:2px solid #ff0000;
+  border-radius:5px;
+  text-align:center;
+  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000;
+  transition:0.3s;
+}
+.btn-neon:hover {
+  background:#ff0000;
+  color:#fff;
+  transform:scale(1.1);
+  box-shadow:0 0 30px #ff0000,0 0 50px #ff8888;
+}
+
+/* Áudio */
+audio { width:100%; margin:10px 0; }
+
+/* Rodapé */
+footer {
+  background:linear-gradient(90deg,#ff0000,#ff5555,#ff0000);
+  color:#fff;
+  text-align:center;
+  padding:25px 20px;
+  font-weight:bold;
+  text-shadow:0 0 6px #ff4444;
+}
+
+/* Contato */
+.contact-info {
+  background: rgba(255,0,0,0.1);
+  padding:15px;
   border-radius:10px;
-  margin-top:20px;
+  margin-top:15px;
+  text-shadow:0 0 6px #ff4444;
 }
-#precos h3 { color:#ffd700; text-shadow:0 0 8px #ff4444; margin-bottom:15px; }
-#precos p { color:#ffdd99; margin-bottom:8px; font-weight:bold; }
-#precos ul li { color:#ffffff; font-weight:bold; }
+
+/* Responsivo */
+@media(max-width:768px){
+  header h1{ font-size:2.2rem;}
+  header p{ font-size:1rem;}
+  .btn-neon{padding:10px 15px; font-size:0.9rem;}
+  section{padding:15px;}
+  #voll-produto { flex-direction: column; align-items: center; }
+  #voll-produto img { margin-bottom:20px; }
+}
 </style>
 </head>
 <body>
@@ -151,28 +163,15 @@ footer { background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); color:#fff;
 </header>
 
 <script>
-// Balões animados no header
-const header = document.querySelector('header');
-const totalBalloons = 12; // camada 1
-for (let i = 0; i < totalBalloons; i++) {
-  const balloon = document.createElement('div');
-  balloon.className = 'balloon layer1';
-  balloon.style.left = Math.random() * 100 + 'vw';
-  balloon.style.width = 15 + Math.random() * 25 + 'px';
-  balloon.style.height = 15 + Math.random() * 25 + 'px';
-  balloon.style.animationDuration = 6 + Math.random() * 5 + 's';
-  header.appendChild(balloon);
-}
-// Segunda camada de balões
-const totalBalloons2 = 10; 
-for (let i = 0; i < totalBalloons2; i++) {
-  const balloon = document.createElement('div');
-  balloon.className = 'balloon layer2';
-  balloon.style.left = Math.random() * 100 + 'vw';
-  balloon.style.width = 10 + Math.random() * 20 + 'px';
-  balloon.style.height = 10 + Math.random() * 20 + 'px';
-  balloon.style.animationDuration = 7 + Math.random() * 6 + 's';
-  header.appendChild(balloon);
+// Balões animados com duas camadas
+const headerElement = document.querySelector('header');
+const totalBalloons = 15;
+for(let i=0;i<totalBalloons;i++){
+  const layer = document.createElement('div');
+  layer.className = 'balloon ' + (i % 2 === 0 ? 'layer1' : 'layer2');
+  layer.style.left = Math.random()*100+'vw';
+  layer.style.animationDuration = 6+Math.random()*5+'s';
+  headerElement.appendChild(layer);
 }
 </script>
 
@@ -211,22 +210,6 @@ for (let i = 0; i < totalBalloons2; i++) {
       <li>Quem busca qualidade de vida e conhecimento corporal</li>
     </ul>
   </div>
-</section>
-
-<!-- Preços -->
-<section id="precos">
-<h3>Escolha Sua Assinatura da VOLL+</h3>
-<p>O MAIS VANTAJOSO</p>
-<p>R$360 de desconto</p>
-<p>Desconto em nossos parceiros: EquiPilates e Pratyque</p>
-<ul>
-<li>Curso de sua escolha com certificado</li>
-<li>Acesso a todos os cursos dentro da plataforma VOLL+</li>
-<li>Conteúdos novos todos os meses</li>
-<li>*assinatura válida por um ano com renovação automática</li>
-</ul>
-<p>R$ 149/mês – PLANO ANUAL SEM COMPROMETER O LIMITE DO CARTÃO DE CRÉDITO</p>
-<p>R$ 126/mês – PLANO ANUAL PARCELADO NO CARTÃO DE CRÉDITO EM ATÉ 12X</p>
 </section>
 
 <section>
@@ -273,6 +256,5 @@ for (let i = 0; i < totalBalloons2; i++) {
 <footer>
 &copy; 2025 Portal Evolução — Todos os direitos reservados
 </footer>
-
 </body>
 </html>
