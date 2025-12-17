@@ -13,16 +13,18 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+  /* Estilo do Cabeçalho */
   header {
-    background: linear-gradient(135deg, #2e8b57, #1c6e3f);
+    background: linear-gradient(135deg, #2e8b57, #1c6e3f); /* Gradiente verde */
     padding: 50px 20px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
-    animation: fadeInHeader 1s ease-out;
+    animation: fadeInHeader 1s ease-out; /* Animação do cabeçalho */
   }
 
+  /* Estilo do título */
   .header-container h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 36px;
@@ -32,16 +34,18 @@
     transition: color 0.3s ease, transform 0.3s ease;
   }
 
+  /* Estilo do texto destacado no título */
   .header-container h1 span {
-    color: #27ae60;
+    color: #27ae60; /* Verde brilhante */
   }
 
-  /* Efeito de Hover nas Letras */
+  /* Efeito de Hover no Título */
   .header-container h1:hover {
     transform: translateY(-10px);
-    color: #2ecc71;
+    color: #2ecc71; /* Cor mais brilhante ao passar o mouse */
   }
 
+  /* Estilo do subtítulo */
   .subtitle {
     font-size: 18px;
     color: #ccc;
@@ -49,11 +53,12 @@
     transition: color 0.3s ease;
   }
 
-  /* Efeito de Hover na Subtítulo */
+  /* Efeito de Hover no Subtítulo */
   .subtitle:hover {
-    color: #27ae60;
+    color: #27ae60; /* Cor ao passar o mouse */
   }
 
+  /* Estilo dos botões do cabeçalho */
   .header-buttons {
     margin-top: 30px;
   }
@@ -62,7 +67,7 @@
     display: inline-block;
     margin: 10px 12px;
     padding: 12px 28px;
-    background-color: #ff6b6b;
+    background-color: #ff6b6b; /* Cor de fundo dos botões */
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -77,10 +82,10 @@
   .header-buttons .btn:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
-    background-color: #e55050;
+    background-color: #e55050; /* Cor do botão ao passar o mouse */
   }
 
-  /* Animação suave para a entrada do cabeçalho */
+  /* Animação de entrada suave do cabeçalho */
   @keyframes fadeInHeader {
     from {
       opacity: 0;
