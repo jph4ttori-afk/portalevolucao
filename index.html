@@ -6,135 +6,193 @@
 
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
 
-<meta name="description" content="Portal Evolução: cursos de Pilates e bem-estar. Conhecimento que move sua vida com acesso a plataformas certificadas e conteúdo profissional.">
+<meta name="description" content="Portal Evolução é uma vitrine profissional de cursos de Pilates e bem-estar. Conhecimento certificado, plataformas confiáveis e acesso direto ao conteúdo oficial.">
 
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){dataLayer.push(arguments);}  
   gtag('js', new Date());
   gtag('config', 'AW-17808283080');
 </script>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-body { 
-  background:#2c2c2c; 
-  color:#ffffff; 
-  line-height:1.6; 
-  font-size:16px; 
-  text-shadow: 0 0 6px #ff4444;
+body{
+  background:#2c2c2c;
+  color:#ffffff;
+  line-height:1.7;
+  font-size:16px;
+  text-shadow:0 0 5px rgba(255,80,80,0.4);
 }
 
 /* HEADER */
-header {
-  position: relative;
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff0000, #a60000);
-  overflow: hidden;
-  border-bottom: 4px solid #ff4444;
-  box-shadow: 0 0 20px #ff0000;
+header{
+  position:relative;
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#ff0000,#7a0000);
+  overflow:hidden;
+  border-bottom:4px solid #ff4444;
+  box-shadow:0 0 25px rgba(255,0,0,0.8);
 }
-header h1 {
-  font-size: 3.2rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
+header h1{
+  font-size:3.3rem;
+  margin-bottom:18px;
+  letter-spacing:1px;
+  text-shadow:0 0 18px #ff0000,0 0 35px #ff5555;
 }
-header p {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.2rem;
+header p{
+  max-width:920px;
+  margin:auto;
+  font-size:1.2rem;
+  opacity:0.95;
 }
 
-.header-lines {
-  height: 4px;
-  width: 120px;
-  background: #ff4444;
-  margin: 15px auto;
-  border-radius: 2px;
+.header-lines{
+  height:4px;
+  width:140px;
+  background:#ff4444;
+  margin:18px auto;
+  border-radius:2px;
+  box-shadow:0 0 10px #ff0000;
 }
 
 /* BALÕES */
-header .balloon {
-  background: rgba(255,80,80,0.6);
-  border-radius: 50%;
-  position: absolute;
-  animation: floatUp linear infinite;
+header .balloon{
+  background:rgba(255,90,90,0.55);
+  border-radius:50%;
+  position:absolute;
+  animation:floatUp linear infinite;
+  filter:blur(0.3px);
 }
-header .balloon.layer2 {
-  background: rgba(255,120,120,0.4);
+header .balloon.layer2{
+  background:rgba(255,140,140,0.35);
 }
-@keyframes floatUp {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-50px); }
+@keyframes floatUp{
+  0%{transform:translateY(110%);}  
+  100%{transform:translateY(-80px);}  
 }
 
-/* CONTEÚDO */
-main { padding:50px 20px; max-width:1200px; margin:auto; }
-section { 
-  margin-bottom:40px; 
-  padding:20px; 
-  border-radius:10px; 
-  background:rgba(255,0,0,0.05); 
+/* MAIN */
+main{
+  padding:55px 20px;
+  max-width:1200px;
+  margin:auto;
 }
-h2 { 
-  font-size:2rem; 
-  margin-bottom:15px; 
-  border-bottom:2px solid #ff0000; 
-  display:inline-block; 
-  padding-bottom:5px; 
+section{
+  margin-bottom:45px;
+  padding:28px;
+  border-radius:14px;
+  background:linear-gradient(180deg,rgba(255,0,0,0.08),rgba(0,0,0,0.25));
+  box-shadow:0 0 18px rgba(255,0,0,0.25);
 }
-ul { list-style:none; margin-top:15px; }
-ul li { position:relative; padding-left:25px; margin-bottom:10px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
+
+h2{
+  font-size:2.1rem;
+  margin-bottom:18px;
+  border-bottom:2px solid #ff0000;
+  display:inline-block;
+  padding-bottom:6px;
+}
+
+h3{
+  margin-top:18px;
+  margin-bottom:10px;
+  font-size:1.3rem;
+}
+
+p{
+  margin-bottom:10px;
+}
+
+ul{
+  list-style:none;
+  margin-top:12px;
+}
+ul li{
+  position:relative;
+  padding-left:26px;
+  margin-bottom:9px;
+}
+ul li::before{
+  content:'✔';
+  position:absolute;
+  left:0;
+  color:#ff0000;
+}
 
 /* BOTÕES */
-.btn-neon {
-  display:inline-block; 
-  margin:8px; 
-  padding:14px 24px; 
-  color:#ffffff; 
-  text-decoration:none; 
-  font-weight:bold; 
-  border:2px solid #ff0000; 
-  border-radius:6px;
-  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; 
-  transition:0.3s;
+.btn-neon{
+  display:inline-block;
+  margin:10px 8px 0 0;
+  padding:15px 26px;
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:bold;
+  letter-spacing:0.4px;
+  border:2px solid #ff0000;
+  border-radius:8px;
+  box-shadow:0 0 12px #ff0000,0 0 22px rgba(255,0,0,0.8);
+  transition:all 0.35s ease;
 }
-.btn-neon:hover { 
-  background:#ff0000; 
-  transform:scale(1.08); 
-  box-shadow:0 0 30px #ff0000; 
+.btn-neon:hover{
+  background:#ff0000;
+  transform:scale(1.08);
+  box-shadow:0 0 35px #ff0000,0 0 60px rgba(255,80,80,0.9);
 }
 
 /* VOLL */
-#voll-produto {
+#voll-produto{
   display:flex;
   flex-wrap:wrap;
-  gap:30px;
+  gap:34px;
+  align-items:center;
 }
-#voll-produto img {
+#voll-produto img{
   width:300px;
   border:4px solid #ff0000;
-  border-radius:12px;
+  border-radius:16px;
+  box-shadow:0 0 22px rgba(255,0,0,0.7);
 }
-.texto-produto { flex:1; }
+.texto-produto{
+  flex:1;
+}
+
+/* PRÉVIA SITE */
+.preview-site{
+  margin-top:18px;
+  padding:18px;
+  border-radius:12px;
+  background:rgba(0,0,0,0.45);
+  border:1px solid rgba(255,0,0,0.4);
+}
+.preview-site span{
+  color:#ff5555;
+  font-weight:bold;
+}
 
 /* FOOTER */
-footer {
-  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000);
+footer{
+  background:linear-gradient(90deg,#ff0000,#ff5555,#ff0000);
   text-align:center;
-  padding:25px;
+  padding:28px;
   font-weight:bold;
+  letter-spacing:0.5px;
+  box-shadow:0 -5px 20px rgba(255,0,0,0.6);
 }
 
 /* RESPONSIVO */
 @media(max-width:768px){
-  header h1{font-size:2.2rem;}
-  #voll-produto{flex-direction:column;align-items:center;}
+  header h1{font-size:2.3rem;}
+  #voll-produto{flex-direction:column;}
 }
 </style>
 </head>
@@ -145,22 +203,22 @@ footer {
   <div class="header-lines"></div>
   <h1>Portal Evolução</h1>
   <p>
-    Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos
-    para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados,
-    com links diretos para acesso às plataformas dos produtores.
+    Conhecimento que impulsiona resultados reais. O Portal Evolução é uma vitrine moderna,
+    profissional e estratégica, criada para conectar você aos melhores cursos de Pilates e
+    bem-estar disponíveis no mercado digital.
   </p>
   <div class="header-lines"></div>
 </header>
 
 <script>
 const header = document.querySelector('header');
-for (let i = 0; i < 12; i++) {
-  const b = document.createElement('div');
-  b.className = 'balloon';
-  b.style.left = Math.random()*100+'vw';
-  b.style.width = 15+Math.random()*25+'px';
-  b.style.height = 20+Math.random()*25+'px';
-  b.style.animationDuration = 6+Math.random()*5+'s';
+for(let i=0;i<14;i++){
+  const b=document.createElement('div');
+  b.className='balloon';
+  b.style.left=Math.random()*100+'vw';
+  b.style.width=18+Math.random()*30+'px';
+  b.style.height=18+Math.random()*30+'px';
+  b.style.animationDuration=7+Math.random()*6+'s';
   header.appendChild(b);
 }
 </script>
@@ -168,39 +226,47 @@ for (let i = 0; i < 12; i++) {
 <main>
 
 <section>
-<h2>Portal Evolução</h2>
-<p>🔹 Profissional e confiável</p>
-<p>🔹 Focado em Pilates e bem-estar</p>
-<p>🔹 Pensando no futuro (expansão para outros cursos)</p>
-<p><strong>Este site pode conter links afiliados.</strong> Ao acessar um curso, você será direcionado ao site oficial do produtor.</p>
+<h2>Sobre o Portal</h2>
+<p>✔ Ambiente profissional, confiável e orientado à conversão</p>
+<p>✔ Curadoria focada em Pilates, saúde e bem-estar</p>
+<p>✔ Estrutura preparada para expansão contínua</p>
+<p><strong>Transparência:</strong> este site pode conter links afiliados. Ao clicar, você será direcionado ao ambiente oficial do produtor, com total segurança.</p>
 </section>
 
 <section id="voll-produto">
 <img src="produto.png.png" alt="VOLL+ Pilates">
 <div class="texto-produto">
 <h2>VOLL+ Pilates</h2>
-<p>A VOLL+ reúne cursos certificados de Pilates em um único lugar, com acesso imediato, atualizações frequentes e certificado de conclusão.</p>
-<p>A VOLL, que significa “Completo” em alemão, é referência global em produtos e serviços de Pilates.</p>
+<p>
+A VOLL+ é uma plataforma premium que reúne formações completas em Pilates, com conteúdos
+atualizados, metodologia reconhecida e certificação ao final de cada curso.
+</p>
+<p>
+O nome VOLL significa “completo” em alemão — um conceito que representa excelência,
+profundidade e padrão internacional.
+</p>
 
-<h3>3 Benefícios Principais</h3>
+<h3>Principais Benefícios</h3>
 <ul>
-<li>Aprenda do zero ao avançado</li>
-<li>Aulas práticas e didáticas</li>
-<li>Certificação reconhecida</li>
+<li>Formação do nível iniciante ao avançado</li>
+<li>Aulas práticas, objetivas e aplicáveis</li>
+<li>Certificação valorizada no mercado</li>
 </ul>
 
-<h3>Para quem é o curso?</h3>
+<h3>Indicado para</h3>
 <ul>
 <li>Profissionais de Educação Física</li>
 <li>Fisioterapeutas</li>
-<li>Estudantes da saúde</li>
+<li>Estudantes da área da saúde</li>
 <li>Pessoas que desejam atuar com Pilates</li>
 </ul>
 </div>
 </section>
 
 <section>
-<h2>Links Rápidos</h2>
+<a href="https://go.hotmart.com/P103425796F" target="_blank" rel="nofollow sponsored" class="btn-neon">
+Página de Vendas Oficial
+</a>
 
 <a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" rel="nofollow sponsored" class="btn-neon">
 Checkout VOLL+ Pilates
@@ -211,22 +277,26 @@ Acessar Plataforma VOLL+
 </a>
 
 <a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" rel="nofollow sponsored" class="btn-neon">
-Checkout 2ª Semana Pilates
+2ª Semana Pilates
 </a>
 
+<div class="preview-site">
+<span>Prévia do Projeto:</span><br>
+Site 2.0 Mestre — <a href="https://jph4ttori-afk.github.io/Site2.0Mestre/" target="_blank" style="color:#ffffff;text-decoration:underline;">jph4ttori-afk.github.io/Site2.0Mestre/</a>
+</div>
 </section>
 
 <section>
-<h2>Contato & Segurança</h2>
-<p>📩 suporte@grupovoll.com.br</p>
-<p>📷 Instagram: @vollpilatesgroup</p>
-<p>⚠️ Confirme sempre antes de efetuar qualquer pagamento.</p>
+<h2>Contato & Confiabilidade</h2>
+<p>📞 Atendimento: <strong>(11) 97868-2202</strong></p>
+<p>📷 Instagram oficial: <strong>@vollpilatesgroup</strong></p>
+<p>🔒 Sempre confirme se está no ambiente oficial antes de concluir qualquer pagamento.</p>
 </section>
 
 </main>
 
 <footer>
-© 2026 Portal Evolução — Todos os direitos reservados
+© 2026 Portal Evolução — Experiência, autoridade e evolução contínua
 </footer>
 
 </body>
