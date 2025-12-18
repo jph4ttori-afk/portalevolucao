@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
 
-<meta name="description" content="Portal Evolução — Cursos testados e aprovados para melhorar sua vida e carreira. Conheça o VOLL+ Pilates com certificado e acesso completo.">
+<meta name="description" content="Portal Evolução: cursos de Pilates e bem-estar. Conhecimento que move sua vida com acesso a plataformas certificadas e conteúdo profissional.">
 
-<!-- Google Tag (Google Ads) -->
+<!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -27,7 +28,7 @@ body {
   text-shadow: 0 0 6px #ff4444;
 }
 
-/* Header */
+/* HEADER */
 header {
   position: relative;
   text-align: center;
@@ -40,6 +41,7 @@ header {
 header h1 {
   font-size: 3.2rem;
   margin-bottom: 20px;
+  text-shadow: 0 0 15px #ff0000, 0 0 25px #ff5555;
 }
 header p {
   max-width: 900px;
@@ -55,7 +57,7 @@ header p {
   border-radius: 2px;
 }
 
-/* Balões */
+/* BALÕES */
 header .balloon {
   background: rgba(255,80,80,0.6);
   border-radius: 50%;
@@ -70,7 +72,7 @@ header .balloon.layer2 {
   100% { transform: translateY(-50px); }
 }
 
-/* Conteúdo */
+/* CONTEÚDO */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
 section { 
   margin-bottom:40px; 
@@ -83,53 +85,56 @@ h2 {
   margin-bottom:15px; 
   border-bottom:2px solid #ff0000; 
   display:inline-block; 
+  padding-bottom:5px; 
 }
 ul { list-style:none; margin-top:15px; }
 ul li { position:relative; padding-left:25px; margin-bottom:10px; }
 ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
-/* Botões */
+/* BOTÕES */
 .btn-neon {
   display:inline-block; 
-  margin:10px 5px; 
+  margin:8px; 
   padding:14px 24px; 
   color:#ffffff; 
   text-decoration:none; 
   font-weight:bold; 
   border:2px solid #ff0000; 
   border-radius:6px;
-  box-shadow:0 0 15px #ff0000; 
+  box-shadow:0 0 10px #ff0000,0 0 20px #ff0000; 
   transition:0.3s;
 }
 .btn-neon:hover { 
   background:#ff0000; 
-  transform:scale(1.1); 
+  transform:scale(1.08); 
+  box-shadow:0 0 30px #ff0000; 
 }
 
-/* Produto */
+/* VOLL */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
   gap:30px;
 }
 #voll-produto img {
-  max-width:300px;
+  width:300px;
   border:4px solid #ff0000;
   border-radius:12px;
 }
+.texto-produto { flex:1; }
 
-/* Rodapé */
-footer { 
-  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); 
-  text-align:center; 
-  padding:25px; 
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000);
+  text-align:center;
+  padding:25px;
   font-weight:bold;
 }
 
-/* Responsivo */
+/* RESPONSIVO */
 @media(max-width:768px){
-  header h1{ font-size:2.2rem;}
-  #voll-produto { flex-direction:column; align-items:center; }
+  header h1{font-size:2.2rem;}
+  #voll-produto{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -140,26 +145,23 @@ footer {
   <div class="header-lines"></div>
   <h1>Portal Evolução</h1>
   <p>
-    Conhecimento que move sua vida. <br><br>
-    Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026.
-    Descubra cursos testados e aprovados, com recomendações honestas e links diretos para você comprar e aprender.
-    <br><br>
-    <strong>Este site pode conter links afiliados.</strong> Ao acessar o curso, você será direcionado ao site oficial do produtor.
-    Isso ajuda MUITO na expansão do conhecimento ao público.
+    Conhecimento que move sua vida. Bem-vindo! Aqui você encontra os melhores cursos
+    para melhorar sua vida e carreira em 2026. Descubra cursos testados e aprovados,
+    com links diretos para acesso às plataformas dos produtores.
   </p>
   <div class="header-lines"></div>
 </header>
 
 <script>
-const headerEl = document.querySelector('header');
-for (let i = 0; i < 15; i++) {
+const header = document.querySelector('header');
+for (let i = 0; i < 12; i++) {
   const b = document.createElement('div');
   b.className = 'balloon';
-  b.style.left = Math.random() * 100 + 'vw';
-  b.style.width = 15 + Math.random() * 25 + 'px';
-  b.style.height = 20 + Math.random() * 25 + 'px';
-  b.style.animationDuration = 6 + Math.random() * 5 + 's';
-  headerEl.appendChild(b);
+  b.style.left = Math.random()*100+'vw';
+  b.style.width = 15+Math.random()*25+'px';
+  b.style.height = 20+Math.random()*25+'px';
+  b.style.animationDuration = 6+Math.random()*5+'s';
+  header.appendChild(b);
 }
 </script>
 
@@ -170,76 +172,61 @@ for (let i = 0; i < 15; i++) {
 <p>🔹 Profissional e confiável</p>
 <p>🔹 Focado em Pilates e bem-estar</p>
 <p>🔹 Pensando no futuro (expansão para outros cursos)</p>
+<p><strong>Este site pode conter links afiliados.</strong> Ao acessar um curso, você será direcionado ao site oficial do produtor.</p>
 </section>
 
 <section id="voll-produto">
 <img src="produto.png.png" alt="VOLL+ Pilates">
-<div>
-<h2>VOLL+ Pilates — Sobre o Produto</h2>
-
-<p>
-A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar.
-Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL,
-além de novas atualizações mensais.
-</p>
-
-<p>
-A VOLL, que significa “Completo” ou “Cheio” em alemão, é líder global em produtos e serviços de Pilates no mundo.
-</p>
-
-<p>
-Nossa missão é contribuir para o crescimento de estudantes e profissionais de Pilates,
-Fisioterapia e Educação Física, por meio de ensino de excelência e soluções inovadoras.
-</p>
+<div class="texto-produto">
+<h2>VOLL+ Pilates</h2>
+<p>A VOLL+ reúne cursos certificados de Pilates em um único lugar, com acesso imediato, atualizações frequentes e certificado de conclusão.</p>
+<p>A VOLL, que significa “Completo” em alemão, é referência global em produtos e serviços de Pilates.</p>
 
 <h3>3 Benefícios Principais</h3>
 <ul>
-<li>Aprenda do zero ao avançado — ideal para iniciantes e profissionais</li>
-<li>Aulas práticas e didáticas com aplicação imediata</li>
-<li>Certificação reconhecida para valorizar seu currículo</li>
+<li>Aprenda do zero ao avançado</li>
+<li>Aulas práticas e didáticas</li>
+<li>Certificação reconhecida</li>
 </ul>
 
-<h3>Para quem é esse curso?</h3>
+<h3>Para quem é o curso?</h3>
 <ul>
 <li>Profissionais de Educação Física</li>
 <li>Fisioterapeutas</li>
-<li>Estudantes da área da saúde</li>
-<li>Pessoas que desejam trabalhar com Pilates</li>
-<li>Quem busca qualidade de vida e conhecimento corporal</li>
+<li>Estudantes da saúde</li>
+<li>Pessoas que desejam atuar com Pilates</li>
 </ul>
-
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon"
-onclick="gtag('event','conversion',{ 'send_to':'AW-17808283080/GT-WKPQX4QL' });">
-Acessar Curso Oficial
-</a>
-
 </div>
 </section>
 
 <section>
-<h2>Dúvidas e Segurança</h2>
-<p>
-O GRUPO VOLL realiza comunicações de cobrança apenas por seus canais oficiais e
-<strong>nunca utiliza contas de pessoas físicas</strong>.
-</p>
-<p>
-⚠️ Não aceitamos depósitos ou transferências para terceiros.
-Tentativas de golpe têm ocorrido — confirme sempre antes de pagar.
-</p>
-<p>
-📩 Email: suporte@grupovoll.com.br<br>
-📷 Instagram: @vollpilatesgroup
-</p>
-<p>
-Contato adicional:<br>
-Gmail: jph4ttori@gmail.com | Cel: (11) 99369-7721
-</p>
+<h2>Links Rápidos</h2>
+
+<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" rel="nofollow sponsored" class="btn-neon">
+Checkout VOLL+ Pilates
+</a>
+
+<a href="https://go.hotmart.com/P103425796F?ap=7c22" target="_blank" rel="nofollow sponsored" class="btn-neon">
+Acessar Plataforma VOLL+
+</a>
+
+<a href="https://go.hotmart.com/P103425796F?ap=1e3c" target="_blank" rel="nofollow sponsored" class="btn-neon">
+Checkout 2ª Semana Pilates
+</a>
+
+</section>
+
+<section>
+<h2>Contato & Segurança</h2>
+<p>📩 suporte@grupovoll.com.br</p>
+<p>📷 Instagram: @vollpilatesgroup</p>
+<p>⚠️ Confirme sempre antes de efetuar qualquer pagamento.</p>
 </section>
 
 </main>
 
 <footer>
-© 2025 Portal Evolução — Todos os direitos reservados
+© 2026 Portal Evolução — Todos os direitos reservados
 </footer>
 
 </body>
