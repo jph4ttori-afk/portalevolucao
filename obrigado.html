@@ -16,83 +16,93 @@
 
     // Evento de conversão Google Ads
     gtag('event', 'conversion', {
-      'send_to': 'AW-17808283080/GT-WKPQX4QL'
+      'send_to': 'AW-17808283080/GT-WKPQX4QL' // Substitua pelo seu ID real
     });
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+    /* Reset básico */
+    * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(135deg, #0d0d0d, #2c3e50);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
       text-align: center;
+      padding: 20px;
     }
 
     .container {
       max-width: 720px;
-      padding: 60px 30px;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.05);
       border-radius: 16px;
+      padding: 60px 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
       opacity: 0;
       transform: translateY(20px);
       animation: fadeIn 1s forwards;
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity:1; transform:translateY(0); }
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 42px;
       margin-bottom: 20px;
+      text-shadow: 0 0 8px #27ae60;
     }
 
     p {
       font-size: 20px;
       line-height: 1.6;
       margin-bottom: 25px;
+      text-shadow: 0 0 6px #27ae60;
     }
 
     .destaque {
-      color: #00ffcc;
-      font-weight: 600;
+      color: #2ecc71;
+      font-weight: 700;
     }
 
-    .btn {
+    .btn-neon {
       display: inline-block;
       margin-top: 20px;
       padding: 14px 36px;
-      background: #00ffcc;
-      color: #000;
+      background: #27ae60;
+      color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 8px;
+      box-shadow: 0 0 10px #2ecc71, 0 0 20px #2ecc71;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,255,204,0.4);
+    .btn-neon:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #2ecc71, 0 0 40px #2ecc71;
     }
 
     footer {
       margin-top: 40px;
       font-size: 14px;
-      opacity: 0.7;
+      opacity: 0.8;
+      text-shadow: 0 0 4px #27ae60;
+    }
+
+    @media(max-width:768px){
+      h1 { font-size: 32px; }
+      p { font-size: 18px; }
+      .btn-neon { padding: 12px 28px; font-size: 16px; }
     }
   </style>
-
 </head>
 
 <body>
@@ -106,16 +116,14 @@
       Em instantes, você será direcionado para o site oficial do curso.
     </p>
 
-    <p>
-      Analise com calma todas as informações antes de finalizar sua inscrição.
-    </p>
+    <p>Analise com calma todas as informações antes de finalizar sua inscrição.</p>
 
-    <a class="btn" href="https://go.hotmart.com/P103425796F" target="_blank" aria-label="Acessar Curso de Pilates">
+    <a class="btn-neon" href="https://go.hotmart.com/P103425796F" target="_blank" aria-label="Acessar Curso de Pilates">
       Acessar Curso de Pilates
     </a>
 
     <footer>
-      © 2026 Portal Evolução
+      © 2026 Portal Evolução · Todos os direitos reservados
     </footer>
   </div>
 
@@ -123,7 +131,7 @@
   <script>
     setTimeout(() => {
       window.location.href = "https://go.hotmart.com/P103425796F";
-    }, 15000); // 15 segundos
+    }, 15000);
   </script>
 
 </body>
