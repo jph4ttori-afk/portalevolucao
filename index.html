@@ -3,20 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Evolução | Cursos de Pilates, Bem-Estar e Carreira</title>
-<meta name="description" content="Portal Evolução: cursos certificados de Pilates e bem-estar. Aprenda do zero ao avançado com a VOLL+ e evolua sua carreira em 2026.">
+<title>Portal Evolução | VOLL+ Pilates & Bem-Estar</title>
 
-<!-- Google tag (gtag.js) - Google Ads -->
+<meta name="description" content="Portal Evolução — Cursos testados e aprovados para melhorar sua vida e carreira. Conheça o VOLL+ Pilates com certificado e acesso completo.">
+
+<!-- Google Tag (Google Ads) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17808283080"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}  
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-17808283080');
 </script>
-
-<!-- Fontes -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
@@ -26,216 +24,222 @@ body {
   color:#ffffff; 
   line-height:1.6; 
   font-size:16px; 
-  text-shadow: 0 0 4px #ff4444;
+  text-shadow: 0 0 6px #ff4444;
 }
 
+/* Header */
 header {
   position: relative;
   text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #ff0000, #8b0000);
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff0000, #a60000);
   overflow: hidden;
   border-bottom: 4px solid #ff4444;
-  box-shadow: 0 0 25px rgba(255,0,0,0.6);
+  box-shadow: 0 0 20px #ff0000;
 }
-
 header h1 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 3.2rem;
   margin-bottom: 20px;
-  text-shadow: 0 0 20px #ff0000;
 }
-
 header p {
   max-width: 900px;
   margin: auto;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .header-lines {
   height: 4px;
-  width: 140px;
+  width: 120px;
   background: #ff4444;
-  margin: 18px auto;
+  margin: 15px auto;
   border-radius: 2px;
-  box-shadow: 0 0 10px #ff8888;
 }
 
+/* Balões */
 header .balloon {
-  background: rgba(255,80,80,0.5);
+  background: rgba(255,80,80,0.6);
   border-radius: 50%;
   position: absolute;
   animation: floatUp linear infinite;
 }
-
 header .balloon.layer2 {
-  background: rgba(255,120,120,0.35);
+  background: rgba(255,120,120,0.4);
 }
-
 @keyframes floatUp {
-  0% { transform: translateY(120%); }
-  100% { transform: translateY(-60px); }
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-50px); }
 }
 
+/* Conteúdo */
 main { padding:50px 20px; max-width:1200px; margin:auto; }
-
 section { 
-  margin-bottom:45px; 
-  padding:25px; 
-  border-radius:12px; 
-  background:rgba(255,0,0,0.06); 
+  margin-bottom:40px; 
+  padding:20px; 
+  border-radius:10px; 
+  background:rgba(255,0,0,0.05); 
 }
-
 h2 { 
   font-size:2rem; 
-  margin-bottom:18px; 
+  margin-bottom:15px; 
   border-bottom:2px solid #ff0000; 
   display:inline-block; 
-  padding-bottom:6px; 
 }
-
-h3 { margin-top:20px; margin-bottom:10px; }
-
 ul { list-style:none; margin-top:15px; }
 ul li { position:relative; padding-left:25px; margin-bottom:10px; }
-ul li::before { content:'✔'; position:absolute; left:0; color:#ff4444; }
+ul li::before { content:'✔'; position:absolute; left:0; color:#ff0000; }
 
+/* Botões */
 .btn-neon {
   display:inline-block; 
-  margin:8px 5px; 
-  padding:14px 26px; 
+  margin:10px 5px; 
+  padding:14px 24px; 
   color:#ffffff; 
   text-decoration:none; 
   font-weight:bold; 
   border:2px solid #ff0000; 
   border-radius:6px;
-  text-align:center; 
-  box-shadow:0 0 12px #ff0000; 
-  transition:0.3s ease;
+  box-shadow:0 0 15px #ff0000; 
+  transition:0.3s;
 }
-
 .btn-neon:hover { 
   background:#ff0000; 
   transform:scale(1.1); 
-  box-shadow:0 0 35px #ff0000; 
 }
 
+/* Produto */
 #voll-produto {
   display:flex;
   flex-wrap:wrap;
-  align-items:flex-start;
   gap:30px;
 }
-
 #voll-produto img {
-  flex:0 0 300px;
+  max-width:300px;
   border:4px solid #ff0000;
-  border-radius:14px;
-  box-shadow:0 0 20px #ff4444;
-}
-
-.texto-produto { flex:1 1 500px; }
-
-.contact-info {
-  background: rgba(255,0,0,0.12);
-  padding:18px;
   border-radius:12px;
 }
 
+/* Rodapé */
 footer { 
   background: linear-gradient(90deg,#ff0000,#ff5555,#ff0000); 
-  color:#fff; 
   text-align:center; 
-  padding:30px 20px; 
-  font-weight:bold; 
+  padding:25px; 
+  font-weight:bold;
 }
 
-@media(max-width:768px){ 
-  header h1{ font-size:2.2rem;} 
-  header p{ font-size:1rem;} 
-  #voll-produto { flex-direction: column; align-items: center; }
+/* Responsivo */
+@media(max-width:768px){
+  header h1{ font-size:2.2rem;}
+  #voll-produto { flex-direction:column; align-items:center; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="header-lines"></div>
   <h1>Portal Evolução</h1>
   <p>
-    Conhecimento que move sua vida. Aqui você encontra cursos testados e aprovados para evoluir sua carreira e qualidade de vida em 2026. Este site pode conter links afiliados.
+    Conhecimento que move sua vida. <br><br>
+    Bem-vindo! Aqui você encontra os melhores cursos para melhorar sua vida e carreira em 2026.
+    Descubra cursos testados e aprovados, com recomendações honestas e links diretos para você comprar e aprender.
+    <br><br>
+    <strong>Este site pode conter links afiliados.</strong> Ao acessar o curso, você será direcionado ao site oficial do produtor.
+    Isso ajuda MUITO na expansão do conhecimento ao público.
   </p>
   <div class="header-lines"></div>
 </header>
 
 <script>
-const header = document.querySelector('header');
-for (let i = 0; i < 18; i++) {
+const headerEl = document.querySelector('header');
+for (let i = 0; i < 15; i++) {
   const b = document.createElement('div');
   b.className = 'balloon';
-  b.style.left = Math.random()*100 + 'vw';
-  b.style.width = 15 + Math.random()*25 + 'px';
-  b.style.height = 15 + Math.random()*25 + 'px';
-  b.style.animationDuration = 6 + Math.random()*6 + 's';
-  header.appendChild(b);
+  b.style.left = Math.random() * 100 + 'vw';
+  b.style.width = 15 + Math.random() * 25 + 'px';
+  b.style.height = 20 + Math.random() * 25 + 'px';
+  b.style.animationDuration = 6 + Math.random() * 5 + 's';
+  headerEl.appendChild(b);
 }
 </script>
 
 <main>
 
 <section>
-<h2>Sobre o Portal Evolução</h2>
+<h2>Portal Evolução</h2>
 <p>🔹 Profissional e confiável</p>
 <p>🔹 Focado em Pilates e bem-estar</p>
-<p>🔹 Pensado para o futuro, com expansão para novos cursos</p>
+<p>🔹 Pensando no futuro (expansão para outros cursos)</p>
 </section>
 
 <section id="voll-produto">
 <img src="produto.png.png" alt="VOLL+ Pilates">
-<div class="texto-produto">
-<h2>VOLL+ Pilates</h2>
-<p>A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar. Com uma única assinatura, você acessa todos os cursos do Grupo VOLL, com atualizações mensais e certificado de conclusão.</p>
-<p>A VOLL, que significa “completo” em alemão, é líder global em produtos e serviços de Pilates.</p>
+<div>
+<h2>VOLL+ Pilates — Sobre o Produto</h2>
 
-<h3>Benefícios</h3>
+<p>
+A VOLL+ é a plataforma que reúne os melhores cursos certificados de Pilates em um único lugar.
+Com uma única assinatura, você tem acesso imediato a todos os cursos online do Grupo VOLL,
+além de novas atualizações mensais.
+</p>
+
+<p>
+A VOLL, que significa “Completo” ou “Cheio” em alemão, é líder global em produtos e serviços de Pilates no mundo.
+</p>
+
+<p>
+Nossa missão é contribuir para o crescimento de estudantes e profissionais de Pilates,
+Fisioterapia e Educação Física, por meio de ensino de excelência e soluções inovadoras.
+</p>
+
+<h3>3 Benefícios Principais</h3>
 <ul>
-<li>Aprenda do zero ao avançado</li>
-<li>Aulas práticas e didáticas</li>
-<li>Certificação reconhecida</li>
+<li>Aprenda do zero ao avançado — ideal para iniciantes e profissionais</li>
+<li>Aulas práticas e didáticas com aplicação imediata</li>
+<li>Certificação reconhecida para valorizar seu currículo</li>
 </ul>
 
-<h3>Para quem é</h3>
+<h3>Para quem é esse curso?</h3>
 <ul>
 <li>Profissionais de Educação Física</li>
 <li>Fisioterapeutas</li>
-<li>Estudantes da saúde</li>
-<li>Pessoas que querem trabalhar com Pilates</li>
+<li>Estudantes da área da saúde</li>
+<li>Pessoas que desejam trabalhar com Pilates</li>
+<li>Quem busca qualidade de vida e conhecimento corporal</li>
 </ul>
 
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon" onclick="gtag('event','conversion',{ 'send_to':'AW-17808283080/GT-WKPQX4QL' });">Acessar Curso Oficial</a>
+<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon"
+onclick="gtag('event','conversion',{ 'send_to':'AW-17808283080/GT-WKPQX4QL' });">
+Acessar Curso Oficial
+</a>
+
 </div>
 </section>
 
 <section>
-<h2>Links Rápidos</h2>
-<a href="https://go.hotmart.com/P103425796F" target="_blank" class="btn-neon">Página de Vendas</a>
-<a href="https://go.hotmart.com/P103425796F?ap=5f68" target="_blank" class="btn-neon">Checkout</a>
-</section>
-
-<section>
-<h2>Contato & Segurança</h2>
-<div class="contact-info">
-<p>Email: suporte@grupovoll.com.br</p>
-<p>Instagram: @vollpilatesgroup</p>
-<p>⚠️ Não realizamos cobranças por contas pessoais.</p>
-<p>Contato do Portal: jph4ttori@gmail.com</p>
-</div>
+<h2>Dúvidas e Segurança</h2>
+<p>
+O GRUPO VOLL realiza comunicações de cobrança apenas por seus canais oficiais e
+<strong>nunca utiliza contas de pessoas físicas</strong>.
+</p>
+<p>
+⚠️ Não aceitamos depósitos ou transferências para terceiros.
+Tentativas de golpe têm ocorrido — confirme sempre antes de pagar.
+</p>
+<p>
+📩 Email: suporte@grupovoll.com.br<br>
+📷 Instagram: @vollpilatesgroup
+</p>
+<p>
+Contato adicional:<br>
+Gmail: jph4ttori@gmail.com | Cel: (11) 99369-7721
+</p>
 </section>
 
 </main>
 
 <footer>
-© 2025 Portal Evolução — Conteúdo informativo com links afiliados
+© 2025 Portal Evolução — Todos os direitos reservados
 </footer>
 
 </body>
